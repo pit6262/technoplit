@@ -105,6 +105,7 @@ $(function(){
     $( window ).resize( setSlider );
 
 
+
 	/* ---------------------------------------------- /*
 	 * Base
 	/* ---------------------------------------------- */
@@ -146,4 +147,50 @@ $(function(){
 
     })
 
+    $('.js-more-link').on('click', function(){
+    	namebl = $(this).html();
+        if(namebl == 'Показать ещё'){
+            $(this).html('Cвернуть');
+        }else{
+           $(this).html('Показать ещё');
+        }
+    	$(this).parents('.filter__item').find('.filter-list .hidden').slideToggle(0);
+    	return false;
+    })
+
+	var $menu = $(".dropdown-nav");
+
+    // jQuery-menu-aim: <meaningful part of the example>
+    // Hook up events to be fired on menu row activation.
+    $menu.menuAim({
+        activate: activateSubmenu,
+        deactivate: deactivateSubmenu
+    });
+
+    function activateSubmenu(row) {
+        var $row = $(row),
+            submenuId = $row.data("submenuId"),
+            $submenu = $("#" + submenuId),
+            height = $menu.outerHeight(),
+            width = $menu.outerWidth();
+
+        // Show the submenu
+        $submenu.css({
+            display: "block",
+            
+        });
+
+        // Keep the currently activated row's highlighted look
+        $row.addClass("active");
+    }
+
+    function deactivateSubmenu(row) {
+        var $row = $(row),
+            submenuId = $row.data("submenuId"),
+            $submenu = $("#" + submenuId);
+
+        // Hide the submenu and remove the row's highlighted look
+        $submenu.css("display", "none");
+        $row.removeClass("active");
+    }
 });

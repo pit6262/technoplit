@@ -4,7 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="format-detection" content="telephone=no">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
-	<title>Название проекта - Главная</title>
+	<title>Главная</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css?ver1.0" />
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css" />
 	<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css" />
@@ -107,15 +107,24 @@
 						</a>
 						<div class="dropdown-block ">
 							<ul class="dropdown-nav">
-								<li class="dropdown-nav__item">
-									<a href="#" class="dropdown-nav__link">Панели ДСП</a>
+								<li data-submenu-id="submenu1" class="dropdown-nav__item">
+									<a  href="#" class="dropdown-nav__link">Панели ДСП</a>
 								</li>
-								<li class="dropdown-nav__item">
-									<a href="#" class="dropdown-nav__link">ЛДСП</a>
+								<li data-submenu-id="submenu2" class="dropdown-nav__item">
+									<a  href="#" class="dropdown-nav__link">ЛДСП</a>
+									<ul class="dropdown-subnav" id="submenu2">
+										
+										<li class="dropdown-subnav__item">
+											<a href="#" class="dropdown-subnav__link">МДФ Egger Россия</a>
+										</li>
+										<li class="dropdown-subnav__item">
+											<a href="#" class="dropdown-subnav__link">МДФ лакированный (Невский ламинат)</a>
+										</li>
+									</ul>
 								</li>
-								<li class="dropdown-nav__item">
-									<a href="#" class="dropdown-nav__link">Панели МДФ</a>
-									<ul class="dropdown-subnav">
+								<li data-submenu-id="submenu3" class="dropdown-nav__item">
+									<a  href="#" class="dropdown-nav__link">Панели МДФ</a>
+									<ul class="dropdown-subnav" id="submenu3">
 										<li class="dropdown-subnav__item">
 											<a href="#" class="dropdown-subnav__link">МДФ лакированный (Невский ламинат)</a>
 										</li>
@@ -124,28 +133,28 @@
 										</li>
 									</ul>
 								</li>
-								<li class="dropdown-nav__item">
+								<li data-submenu-id="submenu4" class="dropdown-nav__item">
 									<a href="#" class="dropdown-nav__link">ЛМДФ</a>
 								</li>
-								<li class="dropdown-nav__item">
+								<li data-submenu-id="submenu5" class="dropdown-nav__item">
 									<a href="#" class="dropdown-nav__link">ДВП</a>
 								</li>
-								<li class="dropdown-nav__item">
+								<li data-submenu-id="submenu6" class="dropdown-nav__item">
 									<a href="#" class="dropdown-nav__link">Столешницы</a>
 								</li>
-								<li class="dropdown-nav__item">
+								<li data-submenu-id="submenu7" class="dropdown-nav__item">
 									<a href="#" class="dropdown-nav__link">Плиты TSS</a>
 								</li>
-								<li class="dropdown-nav__item">
+								<li data-submenu-id="submenu8" class="dropdown-nav__item">
 									<a href="#" class="dropdown-nav__link">Мебельная фурнитура</a>
 								</li>
-								<li class="dropdown-nav__item">
+								<li data-submenu-id="submenu9" class="dropdown-nav__item">
 									<a href="#" class="dropdown-nav__link">Расходные материалы</a>
 								</li>
-								<li class="dropdown-nav__item">
+								<li data-submenu-id="submenu10" class="dropdown-nav__item">
 									<a href="#" class="dropdown-nav__link">Акции</a>
 								</li>
-								<li class="dropdown-nav__item">
+								<li data-submenu-id="submenu11" class="dropdown-nav__item">
 									<a href="#" class="dropdown-nav__link">Фасады</a>
 								</li>
 							</ul>
@@ -856,7 +865,7 @@
 								<div class="news-block__content">
 									<div class="news-block__title"><a href="#">Новое производство</a></div>
 									<div class="date">26.02.2019</div>
-									<p class="news-block__descr d-lg-none">Цвета ЛДСП EGGER, это огромный выбор древесных декоров, фантазийные, фоновые. металлические оттенки.</p>
+									<p class="news-block__descr ">Цвета ЛДСП EGGER, это огромный выбор древесных декоров, фантазийные, фоновые. металлические оттенки.</p>
 									<div class="news-block__footer"><a href="#" class="news-block__link">Читать дальше <i class="fas fa-chevron-right"></i></a></div>
 								</div>
 							</div>
@@ -868,7 +877,7 @@
 								<div class="news-block__content">
 									<div class="news-block__title"><a href="#">Декоры ЛДСП Egger уже в продаже</a></div>
 									<div class="date">26.02.2019</div>
-									<p class="news-block__descr d-lg-none">Цвета ЛДСП EGGER, это огромный выбор древесных декоров, фантазийные, фоновые. металлические оттенки.</p>
+									<p class="news-block__descr ">Цвета ЛДСП EGGER, это огромный выбор древесных декоров, фантазийные, фоновые. металлические оттенки.</p>
 									<div class="news-block__footer"><a href="#" class="news-block__link">Читать дальше <i class="fas fa-chevron-right"></i></a></div>
 								</div>
 							</div>
@@ -1077,6 +1086,8 @@
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/jquery.fancybox.min.js"></script>
 <script src="js/jquery.maskedinput.min.js"></script>
+<script src="js/jquery.menu-aim.js"></script>
+
 <script src="js/custom.js"></script>
 </body>
 </html>
