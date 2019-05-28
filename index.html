@@ -24,6 +24,15 @@
 	<header class="header">
 		<div class="header__top">
 			<div class="container">
+				<button class="nav-toggle d-md-block d-lg-none">
+					<span class="bars bars--dark ">
+						<span></span>
+						<span></span>
+						<span></span>
+					</span>
+					<span class="nav-toggle__text">Меню</span>
+				</button>
+				
 				<nav class="header__nav nav-menu">
 					<a href="#" class="nav-menu__link">О компании</a>
 					<a href="#" class="nav-menu__link">Партнёрство</a>
@@ -40,13 +49,13 @@
 						<div class="basket__text">В корзине: <span class="basket__sum">3 500р.</span></div>
 					</a>
 	
-					<div class="header__personal personal">
+					<div class="header__personal personal ">
 						<span class="personal__icon">
 							<i class="fas fa-sign-in-alt "></i>
 						</span>
 						<a href="#" class="personal__link">Вход</a>
-						<span class="personal__devider">/</span>
-						<a href="#" class="personal__link">Регистрация</a>
+						<span class="personal__devider d-lg-none d-xl-block">/</span>
+						<a href="#" class="personal__link d-lg-none d-xl-block">Регистрация</a>
 					</div>
 				</div>
 			</div>
@@ -70,7 +79,7 @@
 						<div class="work-time__icon">
 							<i class="fas fa-clock"></i>
 						</div>
-						<div class="work-time__text"><span class="nowrap">Пн-пт</span>, <span class="nowrap">с 9.00 до 18.00</span></div>
+						<div class="work-time__text"><span class="nowrap">Пн-пт</span>, <br class="d-none d-lg-block d-xl-none"> <span class="nowrap">с 9.00 до 18.00</span></div>
 					</div>
 				</div>
 				
@@ -701,7 +710,7 @@
 
 			<div class="category-blocks">
 				<div class="row">
-					<div class="col-md-4">
+					<div class="col-md-6 col-lg-4">
 						<div class="category-block" style="background-image: url('img/cat-img1.jpg')">
 							<a href="#" class="category-block__link">
 								<div class="category-block__title">Панели ДСП</div>
@@ -710,7 +719,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-6 col-lg-4">
 						<div class="category-block" style="background-image: url('img/cat-img2.jpg')">
 							<a href="#" class="category-block__link">
 								<div class="category-block__title">Панели МДФ</div>
@@ -719,7 +728,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-6 col-lg-4">
 						<div class="category-block" style="background-image: url('img/cat-img3.jpg')">
 							<a href="#" class="category-block__link">
 								<div class="category-block__title">Декор плит TSS</div>
@@ -728,7 +737,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-6 col-lg-4">
 						<div class="category-block" style="background-image: url('img/cat-img4.jpg')">
 							<a href="#" class="category-block__link">
 								<div class="category-block__title">Фурнитура</div>
@@ -737,7 +746,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-6 col-lg-4">
 						<div class="category-block" style="background-image: url('img/cat-img5.jpg')">
 							<a href="#" class="category-block__link">
 								<div class="category-block__title">Столешницы egger</div>
@@ -746,7 +755,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-6 col-lg-4">
 						<div class="category-block" style="background-image: url('img/cat-img6.jpg')">
 							<a href="#" class="category-block__link">
 								<div class="category-block__title">Декоры ЛДСП Egger</div>
@@ -808,7 +817,7 @@
 							<div class="services-preview__button"><a href="#" class="btn btn--success">Заказать услугу</a></div>
 						</div>
 					</div>
-					<div class="item">
+					<div class="item d-none d-lg-block">
 						<div class="services-preview" style="background-image: url('img/ser-img1.jpg')">
 							<div class="services-preview__title">Распил и кромление ЛДСП</div>
 							<p class="services-preview__descr">Любые детали, из которых состоит мебель, должны быть обработаны по санитарным и техническим нормам. В случае с ЛДСП это кромление торцов. </p>
@@ -816,6 +825,9 @@
 						</div>
 					</div>
 					
+				</div>
+				<div class="link-block d-md-block d-lg-none">
+					<a href="#" class="link">Ко всем услугам</a>
 				</div>
 			</section>
 			<section class="section brands">
@@ -825,7 +837,7 @@
 
 				<div class="news-list">
 					<div class="row">
-						<div class="col-md-6">
+						<div class="col-sm-6 col-md-4 col-lg-6">
 							<div class="news-block">
 								<a href="#" class="news-block__img" style="background-image: url('img/news-img1.jpg')">
 								</a>
@@ -837,26 +849,26 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-3">
+						<div class="col-sm-6 col-md-4 col-lg-3 d-none d-sm-block">
 							<div class="news-block news-block--small">
 								<a href="#" class="news-block__img" style="background-image: url('img/news-img2.jpg')">
 								</a>
 								<div class="news-block__content">
 									<div class="news-block__title"><a href="#">Новое производство</a></div>
 									<div class="date">26.02.2019</div>
-									<p class="news-block__descr">Цвета ЛДСП EGGER, это огромный выбор древесных декоров, фантазийные, фоновые. металлические оттенки.</p>
+									<p class="news-block__descr d-lg-none">Цвета ЛДСП EGGER, это огромный выбор древесных декоров, фантазийные, фоновые. металлические оттенки.</p>
 									<div class="news-block__footer"><a href="#" class="news-block__link">Читать дальше <i class="fas fa-chevron-right"></i></a></div>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-3">
+						<div class="col-sm-6 col-md-4 col-lg-3 d-none d-md-block">
 							<div class="news-block news-block--small">
 								<a href="#" class="news-block__img" style="background-image: url('img/news-img3.jpg')">
 								</a>
 								<div class="news-block__content">
 									<div class="news-block__title"><a href="#">Декоры ЛДСП Egger уже в продаже</a></div>
 									<div class="date">26.02.2019</div>
-									<p class="news-block__descr">Цвета ЛДСП EGGER, это огромный выбор древесных декоров, фантазийные, фоновые. металлические оттенки.</p>
+									<p class="news-block__descr d-lg-none">Цвета ЛДСП EGGER, это огромный выбор древесных декоров, фантазийные, фоновые. металлические оттенки.</p>
 									<div class="news-block__footer"><a href="#" class="news-block__link">Читать дальше <i class="fas fa-chevron-right"></i></a></div>
 								</div>
 							</div>
@@ -871,11 +883,11 @@
 
 			<div class="jombroad">
 				<div class="row jombroad__wrap">
-					<div class="col-md-7 jombroad__left">
+					<div class="col-xl-7 col-md-8 jombroad__left">
 						<div class="jombroad__title">Задать вопрос специалисту</div>
 						<p>Если у Вас появились вопросы по ассортименту или любые другие вопросы, Вы можете написать его нам и наши специалисты с удовольствием ответят!</p>
 					</div>
-					<div class="col-md-5 jombroad__right">
+					<div class="col-xl-5 col-md-4 jombroad__right">
 						<a data-fancybox data-src="#popup-question" data-animation-duration="500" href="javascript:;" class="btn btn--success">Задать вопрос</a>
 					</div>
 				</div>
@@ -889,7 +901,7 @@
 	<footer class="footer">
 		<div class="container">
 			<div class="row footer__row">
-				<div class="col-md-2 footer__item footer__item--hr">
+				<div class="col-sm-5 col-md-3 col-lg-2 footer__item footer__item--hr footer__item--first">
 					<div class="logo footer__logo"><a href="#"><img src="img/technoplit-logo-white.svg" alt=""></a></div>
 					<ul class="footer-nav">
 						<li class="footer-nav__item">
@@ -909,10 +921,10 @@
 						</li>
 					</ul>
 				</div>
-				<div class="col-md-4 footer__item footer__item--hr">
+				<div class="col-sm-7 col-md-5 col-lg-4 footer__item footer__item--hr footer__item--second d-none d-sm-block">
 					<div class="footer__title">Каталог продукции</div>
 					<div class="row">
-						<div class="col-md-4">
+						<div class="col-sm-4">
 							<ul class="footer-nav">
 								<li class="footer-nav__item">
 									<a href="#" class="footer-nav__link">ДСП</a>
@@ -931,7 +943,7 @@
 								</li>
 							</ul>
 						</div>
-						<div class="col-md-8">
+						<div class="col-sm-8">
 							<ul class="footer-nav">
 								<li class="footer-nav__item">
 									<a href="#" class="footer-nav__link">Столешницы</a>
@@ -955,7 +967,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3 footer__item">
+				<div class="col-sm-12 col-md-4 col-lg-3 footer__item">
 					<div class="footer__title">Контактная информация</div>
 					<address class="address">
 						<div class="address__item">
@@ -975,16 +987,29 @@
 						</div>
 					</address>
 				</div>
-				<div class="col-md-3 footer__item">
+				<div class="col-xs-12 col-lg-3 footer__item">
 					<div class="subscribe">
-						<div class="footer__title">Рассылка</div>
-						<p class="fw300 ff2">Подпишитесь, чтобы получать наши акции и предложения, один раз в неделю.</p>
-						<form action="#">
-							<div class="form-field">
-								<input type="email" class="form-input" placeholder="Ваш e-mail">
+						<div class="row align-items-center">
+							<div class="col-lg-12 col-md-6 col-sm-12">
+								<div class="footer__title">Рассылка</div>
+								<p class="fw300 ff2">Подпишитесь, чтобы получать наши акции и предложения, один раз в неделю.</p>
 							</div>
-							<input type="submit" value="Подписаться" class="btn btn--block btn--success">
-						</form>
+							<div class="col-lg-12 col-md-6 col-sm-12">
+								<form action="#">
+									<div class="row">
+										<div class="col-lg-12 col-md-6 col-sm-5">
+											<div class="form-field">
+												<input type="email" class="form-input" placeholder="Ваш e-mail">
+											</div>
+										</div>
+	
+										<div class="col-lg-12 col-md-6 col-sm-5">
+											<input type="submit" value="Подписаться" class="btn btn--block btn--success">
+										</div>
+									</div>
+								</form>		
+							</div>
+						</div>
 					</div>
 				</div>
 				

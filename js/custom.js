@@ -35,7 +35,8 @@ $(function(){
 			nav:true,
 			responsive:{
 				0:{
-			        items:1
+			        items:1,
+			        autoWidth: true,
 			    },
 			    576:{
 			        items:2
@@ -59,10 +60,12 @@ $(function(){
 			margin:30,
 			nav:true,
 			responsive:{
+
 			    0:{
-			        items:1
+			        items:2,
+			        margin:15,
 			    },
-			    600:{
+			    768:{
 			        items:3
 			    },
 			    1000:{
@@ -71,25 +74,35 @@ $(function(){
 			}
 		})
 	}
-	if($('.service-previews').length){
-		$('.service-previews').owlCarousel({
-			navText: ['<i class="fas fa-chevron-left"></i>','<i class="fas fa-chevron-right"></i>'],
-			margin:30,
-			nav:true,
-			responsive:{
-			    0:{
-			        items:1
-			    },
-			    600:{
-			        items:1
-			    },
-			    1000:{
-			        items:2
-			    }
-			}
-		})
-	}
+	
    
+   function setSlider (){
+        if ( $(window).width() > 970 ){
+            if($('.service-previews').length){
+				$('.service-previews').owlCarousel({
+					navText: ['<i class="fas fa-chevron-left"></i>','<i class="fas fa-chevron-right"></i>'],
+					margin:30,
+					nav:true,
+					responsive:{
+					    0:{
+					        items:1
+					    },
+					    600:{
+					        items:2
+					    },
+					    1000:{
+					        items:2
+					    }
+					}
+				})
+			}
+        } else {
+            $('.service-previews').owlCarousel().trigger('destroy.owl.carousel');
+        }
+    }
+
+    setSlider();
+    $( window ).resize( setSlider );
 
 
 	/* ---------------------------------------------- /*
