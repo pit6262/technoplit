@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css" />
 	<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
 	
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
@@ -21,6 +22,8 @@
 <div class="main-wrapper">
 
 	<!-- BEGIN HEADER -->
+	
+	
 	<header class="header">
 		<div class="header__top">
 			<div class="container">
@@ -196,7 +199,8 @@
 			
 			<div class="wrap">
 				<div class="row ">
-					<div class="col-md-3">
+					<!-- filter -->
+					<div class="col-lg-3 ">
 						<aside class="filter">
 							<div class="filter-cat">
 								<div class="filter-cat__name">Плиты МДФ</div>
@@ -209,78 +213,136 @@
 									</li>
 								</ul>
 							</div>
-							<div class="filter__item">
-								<div class="filter__title">Бренд</div>
-								<ul class="filter-list">
-									<li class="filter-list__item">
-										<label class="checkbox">
-											<input type="checkbox">
-											<span class="checkbox__figure"></span>
-											<span class="checkbox__text">Kronospan</span>
-										</label>
-									</li>
-									<li class="filter-list__item">
-										<label class="checkbox">
-											<input type="checkbox">
-											<span class="checkbox__figure"></span>
-											<span class="checkbox__text">SWISS KRONO</span>
-										</label>
-									</li>
-									<li class="filter-list__item">
-										<label class="checkbox">
-											<input type="checkbox">
-											<span class="checkbox__figure"></span>
-											<span class="checkbox__text">KASTAMONU</span>
-										</label>
-									</li>
-									<li class="filter-list__item">
-										<label class="checkbox">
-											<input type="checkbox">
-											<span class="checkbox__figure"></span>
-											<span class="checkbox__text">EGGER</span>
-										</label>
-									</li>
-									<li class="filter-list__item">
-										<label class="checkbox">
-											<input type="checkbox">
-											<span class="checkbox__figure"></span>
-											<span class="checkbox__text">Hettich</span>
-										</label>
-									</li>
-									<li class="filter-list__item hidden" style="display: none;">
-										<label class="checkbox">
-											<input type="checkbox">
-											<span class="checkbox__figure"></span>
-											<span class="checkbox__text">KASTAMONU</span>
-										</label>
-									</li>
-									<li class="filter-list__item hidden" style="display: none;">
-										<label class="checkbox">
-											<input type="checkbox">
-											<span class="checkbox__figure"></span>
-											<span class="checkbox__text">EGGER</span>
-										</label>
-									</li>
-									<li class="filter-list__item hidden" style="display: none;">
-										<label class="checkbox">
-											<input type="checkbox">
-											<span class="checkbox__figure"></span>
-											<span class="checkbox__text">Hettich</span>
-										</label>
-									</li>
-								</ul>
-								<a href="#" class="more js-more-link">Показать ещё</a>
+							<div class="filter__head">
+								<div class="filter__head-title">Фильтр</div>
+								<div class="filter__close js-close-filter"><svg class="icon icon-close"><use xlink:href="#icon-close"></use></svg></div>
 							</div>
-							<div class="filter__item">
-								<div class="filter__title">Цена</div>
-								
+							<div class="filter__body">
+								<div class="filter__item">
+									<div class="filter__title">Бренд</div>
+									<ul class="filter-list">
+										<li class="filter-list__item">
+											<label class="checkbox">
+												<input type="checkbox">
+												<span class="checkbox__figure"></span>
+												<span class="checkbox__text">Kronospan</span>
+											</label>
+										</li>
+										<li class="filter-list__item">
+											<label class="checkbox">
+												<input type="checkbox">
+												<span class="checkbox__figure"></span>
+												<span class="checkbox__text">SWISS KRONO</span>
+											</label>
+										</li>
+										<li class="filter-list__item">
+											<label class="checkbox">
+												<input type="checkbox">
+												<span class="checkbox__figure"></span>
+												<span class="checkbox__text">KASTAMONU</span>
+											</label>
+										</li>
+										<li class="filter-list__item">
+											<label class="checkbox">
+												<input type="checkbox">
+												<span class="checkbox__figure"></span>
+												<span class="checkbox__text">EGGER</span>
+											</label>
+										</li>
+										<li class="filter-list__item">
+											<label class="checkbox">
+												<input type="checkbox">
+												<span class="checkbox__figure"></span>
+												<span class="checkbox__text">Hettich</span>
+											</label>
+										</li>
+										<li class="filter-list__item hidden" style="display: none;">
+											<label class="checkbox">
+												<input type="checkbox">
+												<span class="checkbox__figure"></span>
+												<span class="checkbox__text">KASTAMONU</span>
+											</label>
+										</li>
+										<li class="filter-list__item hidden" style="display: none;">
+											<label class="checkbox">
+												<input type="checkbox">
+												<span class="checkbox__figure"></span>
+												<span class="checkbox__text">EGGER</span>
+											</label>
+										</li>
+										<li class="filter-list__item hidden" style="display: none;">
+											<label class="checkbox">
+												<input type="checkbox">
+												<span class="checkbox__figure"></span>
+												<span class="checkbox__text">Hettich</span>
+											</label>
+										</li>
+									</ul>
+									<a href="#" class="more js-more-link">Показать ещё</a>
+								</div>
+								<div class="filter__item">
+									<div class="filter__title">Цена</div>
+									
+									<div id="slider-range"></div>
+									<div class="slider-wrap">
+										<div class="slider-wrap__item">
+											<input type="text" class="form-input" id="f-price1"  value="500">
+										</div>
+										<div class="slider-wrap__devider">&mdash;</div>
+										<div class="slider-wrap__item">
+											<input type="text" class="form-input" id="f-price2"  value="2500">
+										</div>
+									</div>
+									
+								</div>
 							</div>
 						</aside>
 					</div>
-					<div class="col-md-9">
+					<!-- / filter -->
+
+					<!-- Catalog -->
+					<div class="col-lg-9 col-md-12">
 						<div class="content">
-							<div class="row ">
-								<div class="col-md-4">
+							<!-- Sorting -->
+							<div class="row">
+								<div class="col-md-4 col-sm-6 col-9 d-lg-none">
+									<a href="#" class="btn btn--block js-open-filter">Фильтр по параметрам</a>
+								</div>
+								<div class="col-md-8 col-sm-6 col-3 col-lg-12">
+									<div class="sorting">
+										<div class="sorting__left ">
+											<div class="sorting__title ">
+												Сортировка:
+											</div>
+											<div class="drop ">
+												<a href="#" class="drop-button sorting__link"><span>цена - по возрастающей</span> <i class="fas fa-chevron-down"></i></a>
+												<ul class="drop-list">
+													<li class="drop-list__item">
+														<a href="#" class="drop-list__link"></a>
+													</li>
+												</ul>
+											</div>
+											
+										</div>
+										<div class="sorting__right">
+											<div class="sorting__title d-none d-lg-block">
+												Вариант отображения:
+											</div>
+											<div class="sorting-grid">
+												<a href="#card-grid" class="sorting-grid__link active"><svg class="icon icon-grid"><use xlink:href="#icon-grid"></use></svg></a>
+												<a href="#card-table" class="sorting-grid__link d-none d-sm-block"><svg class="icon icon-list-big"><use xlink:href="#icon-list-big"></use></svg></a>
+												<a href="#card-list" class="sorting-grid__link"><svg class="icon icon-list"><use xlink:href="#icon-list"></use></svg></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- / Sorting -->
+							
+							<!-- Catalog grid -->
+							<div class="card-grid tab-content" id="card-grid">
+								<div class="row " >
+								<div class="col-md-4 col-sm-6">
 									<div class="card-item">
 										<div class="card-item__img">
 											<a href="#">
@@ -288,6 +350,10 @@
 											</a>
 										</div>
 										<div class="card-item__body">
+											<div class="card-item__slider">
+												<div class="item" data-url="img/card-img1.jpg"><img src="img/preview-img.jpg" alt=""></div>
+												<div class="item" data-url="img/card-img2.jpg"><img src="img/preview-img1.jpg" alt=""></div>
+											</div>
 											<div class="sku">арт. 025365</div>
 											<a href="#" class="card-item__title"><span>МДФ 6мм Кастамону 2,80х2,07</span></a>
 											<div class="card-item__price">
@@ -300,11 +366,207 @@
 												<input type="text" class="group-number__input" value="1" readonly>
 												<button type="button" class="group-number__plus js-plus"><i class="fas fa-plus"></i></button>
 											</div>
-											<a href="#" class="btn btn--success"><i class="icon icon--shopping-cart"></i> В корзину</a>
+											<a href="#" class="btn btn--success"><svg class="icon icon-shopping-cart"><use xlink:href="#icon-shopping-cart"></use></svg> <span class="d-none d-md-inline">В корзину</span></a>
 										</div>
 									</div>
 								</div>
-								<div class="col-md-4">
+								<div class="col-md-4 col-sm-6">
+									<div class="card-item">
+										<div class="card-item__img">
+											<a href="#">
+												<img src="img/card-img2.jpg" alt="">
+											</a>
+										</div>
+										<div class="card-item__body">
+											<div class="card-item__slider">
+												<div class="item" data-url="img/card-img1.jpg"><img src="img/preview-img.jpg" alt=""></div>
+												<div class="item" data-url="img/card-img2.jpg"><img src="img/preview-img1.jpg" alt=""></div>
+											</div>
+											<div class="sku">арт. 025365</div>
+											<a href="#" class="card-item__title"><span>ДСП 16х2800х2070 ПА-1 EGGER</span></a>
+											<div class="card-item__price">
+												<span class="price">350р. <span class="price__count">/ шт.</span></span>
+											</div>
+										</div>
+										<div class="card-item__footer">
+											<div class="group-number">
+												<button type="button" class="group-number__minus js-minus"><i class="fas fa-minus"></i></button>
+												<input type="text" class="group-number__input" value="1" readonly>
+												<button type="button" class="group-number__plus js-plus"><i class="fas fa-plus"></i></button>
+											</div>
+											<a href="#" class="btn btn--success"><svg class="icon icon-shopping-cart"><use xlink:href="#icon-shopping-cart"></use></svg> <span class="d-none d-md-inline">В корзину</span></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-6">
+									<div class="card-item">
+										<div class="card-item__img">
+											<a href="#">
+												<img src="img/card-img3.jpg" alt="">
+											</a>
+										</div>
+										<div class="card-item__body">
+											<div class="card-item__slider">
+												<div class="item" data-url="img/card-img1.jpg"><img src="img/preview-img.jpg" alt=""></div>
+												<div class="item" data-url="img/card-img2.jpg"><img src="img/preview-img1.jpg" alt=""></div>
+											</div>
+											<div class="sku">арт. 025365</div>
+											<a href="#" class="card-item__title"><span>ДСП 16х2800х2070 ПА-1 EGGER</span></a>
+											<div class="card-item__price">
+												<span class="price">2 300р. <span class="price__count">/ лист</span></span>
+											</div>
+										</div>
+										<div class="card-item__footer">
+											<div class="group-number">
+												<button type="button" class="group-number__minus js-minus"><i class="fas fa-minus"></i></button>
+												<input type="text" class="group-number__input" value="1" readonly>
+												<button type="button" class="group-number__plus js-plus"><i class="fas fa-plus"></i></button>
+											</div>
+											<a href="#" class="btn btn--success"><svg class="icon icon-shopping-cart"><use xlink:href="#icon-shopping-cart"></use></svg> <span class="d-none d-md-inline">В корзину</span></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-6">
+									<div class="card-item">
+										<div class="card-item__img">
+											<a href="#">
+												<img src="img/card-img2.jpg" alt="">
+											</a>
+										</div>
+										<div class="card-item__body">
+											<div class="card-item__slider">
+												<div class="item" data-url="img/card-img1.jpg"><img src="img/preview-img.jpg" alt=""></div>
+												<div class="item" data-url="img/card-img2.jpg"><img src="img/preview-img1.jpg" alt=""></div>
+											</div>
+											<div class="sku">арт. 025365</div>
+											<a href="#" class="card-item__title"><span>ДСП 16х2800х2070 ПА-1 EGGER</span></a>
+											<div class="card-item__price">
+												<span class="price">350р. <span class="price__count">/ шт.</span></span>
+											</div>
+										</div>
+										<div class="card-item__footer">
+											<div class="group-number">
+												<button type="button" class="group-number__minus js-minus"><i class="fas fa-minus"></i></button>
+												<input type="text" class="group-number__input" value="1" readonly>
+												<button type="button" class="group-number__plus js-plus"><i class="fas fa-plus"></i></button>
+											</div>
+											<a href="#" class="btn btn--success"><svg class="icon icon-shopping-cart"><use xlink:href="#icon-shopping-cart"></use></svg> <span class="d-none d-md-inline">В корзину</span></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-6">
+									<div class="card-item">
+										<div class="card-item__img">
+											<a href="#">
+												<img src="img/card-img3.jpg" alt="">
+											</a>
+										</div>
+										<div class="card-item__body">
+											<div class="card-item__slider">
+												<div class="item" data-url="img/card-img1.jpg"><img src="img/preview-img.jpg" alt=""></div>
+												<div class="item" data-url="img/card-img2.jpg"><img src="img/preview-img1.jpg" alt=""></div>
+											</div>
+											<div class="sku">арт. 025365</div>
+											<a href="#" class="card-item__title"><span>ДСП 16х2800х2070 ПА-1 EGGER</span></a>
+											<div class="card-item__price">
+												<span class="price">350р. <span class="price__count">/ шт.</span></span>
+											</div>
+										</div>
+										<div class="card-item__footer">
+											<div class="group-number">
+												<button type="button" class="group-number__minus js-minus"><i class="fas fa-minus"></i></button>
+												<input type="text" class="group-number__input" value="1" readonly>
+												<button type="button" class="group-number__plus js-plus"><i class="fas fa-plus"></i></button>
+											</div>
+											<a href="#" class="btn btn--success"><svg class="icon icon-shopping-cart"><use xlink:href="#icon-shopping-cart"></use></svg> <span class="d-none d-md-inline">В корзину</span></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-6">
+									<div class="card-item">
+										<div class="card-item__img">
+											<a href="#">
+												<img src="img/card-img2.jpg" alt="">
+											</a>
+										</div>
+										<div class="card-item__body">
+											<div class="card-item__slider">
+												<div class="item" data-url="img/card-img1.jpg"><img src="img/preview-img.jpg" alt=""></div>
+												<div class="item" data-url="img/card-img2.jpg"><img src="img/preview-img1.jpg" alt=""></div>
+											</div>
+											<div class="sku">арт. 025365</div>
+											<a href="#" class="card-item__title"><span>ДСП 16х2800х2070 ПА-1 EGGER</span></a>
+											<div class="card-item__price">
+												<span class="price">350р. <span class="price__count">/ шт.</span></span>
+											</div>
+										</div>
+										<div class="card-item__footer">
+											<div class="group-number">
+												<button type="button" class="group-number__minus js-minus"><i class="fas fa-minus"></i></button>
+												<input type="text" class="group-number__input" value="1" readonly>
+												<button type="button" class="group-number__plus js-plus"><i class="fas fa-plus"></i></button>
+											</div>
+											<a href="#" class="btn btn--success"><svg class="icon icon-shopping-cart"><use xlink:href="#icon-shopping-cart"></use></svg> <span class="d-none d-md-inline">В корзину</span></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-6">
+									<div class="card-item">
+										<div class="card-item__img">
+											<a href="#">
+												<img src="img/card-img2.jpg" alt="">
+											</a>
+										</div>
+										<div class="card-item__body">
+											<div class="card-item__slider">
+												<div class="item" data-url="img/card-img1.jpg"><img src="img/preview-img.jpg" alt=""></div>
+												<div class="item" data-url="img/card-img2.jpg"><img src="img/preview-img1.jpg" alt=""></div>
+											</div>
+											<div class="sku">арт. 025365</div>
+											<a href="#" class="card-item__title"><span>ДСП 16х2800х2070 ПА-1 EGGER</span></a>
+											<div class="card-item__price">
+												<span class="price">350р. <span class="price__count">/ шт.</span></span>
+											</div>
+										</div>
+										<div class="card-item__footer">
+											<div class="group-number">
+												<button type="button" class="group-number__minus js-minus"><i class="fas fa-minus"></i></button>
+												<input type="text" class="group-number__input" value="1" readonly>
+												<button type="button" class="group-number__plus js-plus"><i class="fas fa-plus"></i></button>
+											</div>
+											<a href="#" class="btn btn--success"><svg class="icon icon-shopping-cart"><use xlink:href="#icon-shopping-cart"></use></svg> <span class="d-none d-md-inline">В корзину</span></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-6">
+									<div class="card-item">
+										<div class="card-item__img">
+											<a href="#">
+												<img src="img/card-img3.jpg" alt="">
+											</a>
+										</div>
+										<div class="card-item__body">
+											<div class="card-item__slider">
+												<div class="item" data-url="img/card-img1.jpg"><img src="img/preview-img.jpg" alt=""></div>
+												<div class="item" data-url="img/card-img2.jpg"><img src="img/preview-img1.jpg" alt=""></div>
+											</div>
+											<div class="sku">арт. 025365</div>
+											<a href="#" class="card-item__title"><span>ДСП 16х2800х2070 ПА-1 EGGER</span></a>
+											<div class="card-item__price">
+												<span class="price">350р. <span class="price__count">/ шт.</span></span>
+											</div>
+										</div>
+										<div class="card-item__footer">
+											<div class="group-number">
+												<button type="button" class="group-number__minus js-minus"><i class="fas fa-minus"></i></button>
+												<input type="text" class="group-number__input" value="1" readonly>
+												<button type="button" class="group-number__plus js-plus"><i class="fas fa-plus"></i></button>
+											</div>
+											<a href="#" class="btn btn--success"><svg class="icon icon-shopping-cart"><use xlink:href="#icon-shopping-cart"></use></svg> <span class="d-none d-md-inline">В корзину</span></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-6">
 									<div class="card-item">
 										<div class="card-item__img">
 											<a href="#">
@@ -324,23 +586,33 @@
 												<input type="text" class="group-number__input" value="1" readonly>
 												<button type="button" class="group-number__plus js-plus"><i class="fas fa-plus"></i></button>
 											</div>
-											<a href="#" class="btn btn--success"><i class="icon icon--shopping-cart"></i> В корзину</a>
+											<a href="#" class="btn btn--success"><svg class="icon icon-shopping-cart"><use xlink:href="#icon-shopping-cart"></use></svg> <span class="d-none d-md-inline">В корзину</span></a>
 										</div>
 									</div>
 								</div>
-								<div class="col-md-4">
-									<div class="card-item">
-										<div class="card-item__img">
-											<a href="#">
-												<img src="img/card-img3.jpg" alt="">
-											</a>
+								</div>
+							</div>
+							<!-- / Catalog grid -->
+							<div class="card-table tab-content d-none d-sm-block" id="card-table" style="display: none;">
+								<div class="card-item">
+									<div class="card-item__img">
+										<a href="#">
+											<img src="img/card-img1.jpg" alt="">
+										</a>
+									</div>
+									<div class="card-item__body">
+										<div class="card-item__slider">
+											<div class="item" data-url="img/card-img1.jpg"><img src="img/preview-img.jpg" alt=""></div>
+											<div class="item" data-url="img/card-img2.jpg"><img src="img/preview-img1.jpg" alt=""></div>
 										</div>
-										<div class="card-item__body">
-											<div class="sku">арт. 025365</div>
-											<a href="#" class="card-item__title"><span>ДСП 16х2800х2070 ПА-1 EGGER</span></a>
-											<div class="card-item__price">
-												<span class="price">2 300р. <span class="price__count">/ лист</span></span>
-											</div>
+										<div class="sku">арт. 025365</div>
+										<a href="#" class="card-item__title"><span>ДСП 16х2800х2070 ПА-1 EGGER</span></a>
+										<a href="#" class="link-td link-td--success">EGGER</a>
+										
+									</div>
+									<div class="card-item__info">
+										<div class="card-item__price">
+											<span class="price">350р. <span class="price__count">/ шт.</span></span>
 										</div>
 										<div class="card-item__footer">
 											<div class="group-number">
@@ -348,23 +620,29 @@
 												<input type="text" class="group-number__input" value="1" readonly>
 												<button type="button" class="group-number__plus js-plus"><i class="fas fa-plus"></i></button>
 											</div>
-											<a href="#" class="btn btn--success"><i class="icon icon--shopping-cart"></i> В корзину</a>
+											<a href="#" class="btn btn--success"><svg class="icon icon-shopping-cart"><use xlink:href="#icon-shopping-cart"></use></svg> <span class="d-none d-md-inline">В корзину</span></a>
 										</div>
 									</div>
 								</div>
-								<div class="col-md-4">
-									<div class="card-item">
-										<div class="card-item__img">
-											<a href="#">
-												<img src="img/card-img4.jpg" alt="">
-											</a>
+								<div class="card-item">
+									<div class="card-item__img">
+										<a href="#">
+											<img src="img/card-img1.jpg" alt="">
+										</a>
+									</div>
+									<div class="card-item__body">
+										<div class="card-item__slider">
+											<div class="item" data-url="img/card-img1.jpg"><img src="img/preview-img.jpg" alt=""></div>
+											<div class="item" data-url="img/card-img2.jpg"><img src="img/preview-img1.jpg" alt=""></div>
 										</div>
-										<div class="card-item__body">
-											<div class="sku">арт. 025365</div>
-											<a href="#" class="card-item__title"><span>ДСП 16х2800х2070 ПА-1 EGGER</span></a>
-											<div class="card-item__price">
-												<span class="price">350р. <span class="price__count">/ шт.</span></span>
-											</div>
+										<div class="sku">арт. 025365</div>
+										<a href="#" class="card-item__title"><span>ДСП 16х2800х2070 ПА-1 EGGER ДСП 16х2800х2070 ПА-1 EGGER</span></a>
+										<a href="#" class="link-td link-td--success">EGGER</a>
+										
+									</div>
+									<div class="card-item__info">
+										<div class="card-item__price">
+											<span class="price">23 350р. <span class="price__count">/ шт.</span></span>
 										</div>
 										<div class="card-item__footer">
 											<div class="group-number">
@@ -372,23 +650,29 @@
 												<input type="text" class="group-number__input" value="1" readonly>
 												<button type="button" class="group-number__plus js-plus"><i class="fas fa-plus"></i></button>
 											</div>
-											<a href="#" class="btn btn--success"><i class="icon icon--shopping-cart"></i> В корзину</a>
+											<a href="#" class="btn btn--success"><svg class="icon icon-shopping-cart"><use xlink:href="#icon-shopping-cart"></use></svg> <span class="d-none d-md-inline">В корзину</span></a>
 										</div>
 									</div>
 								</div>
-								<div class="col-md-4">
-									<div class="card-item">
-										<div class="card-item__img">
-											<a href="#">
-												<img src="img/card-img3.jpg" alt="">
-											</a>
+								<div class="card-item">
+									<div class="card-item__img">
+										<a href="#">
+											<img src="img/card-img1.jpg" alt="">
+										</a>
+									</div>
+									<div class="card-item__body">
+										<div class="card-item__slider">
+											<div class="item" data-url="img/card-img1.jpg"><img src="img/preview-img.jpg" alt=""></div>
+											<div class="item" data-url="img/card-img2.jpg"><img src="img/preview-img1.jpg" alt=""></div>
 										</div>
-										<div class="card-item__body">
-											<div class="sku">арт. 025365</div>
-											<a href="#" class="card-item__title"><span>ДСП 16х2800х2070 ПА-1 EGGER</span></a>
-											<div class="card-item__price">
-												<span class="price">350р. <span class="price__count">/ шт.</span></span>
-											</div>
+										<div class="sku">арт. 025365</div>
+										<a href="#" class="card-item__title"><span>ДСП 16х2800х2070 ПА-1 EGGER</span></a>
+										<a href="#" class="link-td link-td--success">EGGER</a>
+										
+									</div>
+									<div class="card-item__info">
+										<div class="card-item__price">
+											<span class="price">350р. <span class="price__count">/ шт.</span></span>
 										</div>
 										<div class="card-item__footer">
 											<div class="group-number">
@@ -396,23 +680,29 @@
 												<input type="text" class="group-number__input" value="1" readonly>
 												<button type="button" class="group-number__plus js-plus"><i class="fas fa-plus"></i></button>
 											</div>
-											<a href="#" class="btn btn--success"><i class="icon icon--shopping-cart"></i> В корзину</a>
+											<a href="#" class="btn btn--success"><svg class="icon icon-shopping-cart"><use xlink:href="#icon-shopping-cart"></use></svg> <span class="d-none d-md-inline">В корзину</span></a>
 										</div>
 									</div>
 								</div>
-								<div class="col-md-4">
-									<div class="card-item">
-										<div class="card-item__img">
-											<a href="#">
-												<img src="img/card-img4.jpg" alt="">
-											</a>
+								<div class="card-item">
+									<div class="card-item__img">
+										<a href="#">
+											<img src="img/card-img1.jpg" alt="">
+										</a>
+									</div>
+									<div class="card-item__body">
+										<div class="card-item__slider">
+											<div class="item" data-url="img/card-img1.jpg"><img src="img/preview-img.jpg" alt=""></div>
+											<div class="item" data-url="img/card-img2.jpg"><img src="img/preview-img1.jpg" alt=""></div>
 										</div>
-										<div class="card-item__body">
-											<div class="sku">арт. 025365</div>
-											<a href="#" class="card-item__title"><span>ДСП 16х2800х2070 ПА-1 EGGER</span></a>
-											<div class="card-item__price">
-												<span class="price">350р. <span class="price__count">/ шт.</span></span>
-											</div>
+										<div class="sku">арт. 025365</div>
+										<a href="#" class="card-item__title"><span>ДСП 16х2800х2070 ПА-1 EGGER ДСП 16х2800х2070 ПА-1 EGGER</span></a>
+										<a href="#" class="link-td link-td--success">EGGER</a>
+										
+									</div>
+									<div class="card-item__info">
+										<div class="card-item__price">
+											<span class="price">23 350р. <span class="price__count">/ шт.</span></span>
 										</div>
 										<div class="card-item__footer">
 											<div class="group-number">
@@ -420,23 +710,29 @@
 												<input type="text" class="group-number__input" value="1" readonly>
 												<button type="button" class="group-number__plus js-plus"><i class="fas fa-plus"></i></button>
 											</div>
-											<a href="#" class="btn btn--success"><i class="icon icon--shopping-cart"></i> В корзину</a>
+											<a href="#" class="btn btn--success"><svg class="icon icon-shopping-cart"><use xlink:href="#icon-shopping-cart"></use></svg> <span class="d-none d-md-inline">В корзину</span></a>
 										</div>
 									</div>
 								</div>
-								<div class="col-md-4">
-									<div class="card-item">
-										<div class="card-item__img">
-											<a href="#">
-												<img src="img/card-img4.jpg" alt="">
-											</a>
+								<div class="card-item">
+									<div class="card-item__img">
+										<a href="#">
+											<img src="img/card-img1.jpg" alt="">
+										</a>
+									</div>
+									<div class="card-item__body">
+										<div class="card-item__slider">
+											<div class="item" data-url="img/card-img1.jpg"><img src="img/preview-img.jpg" alt=""></div>
+											<div class="item" data-url="img/card-img2.jpg"><img src="img/preview-img1.jpg" alt=""></div>
 										</div>
-										<div class="card-item__body">
-											<div class="sku">арт. 025365</div>
-											<a href="#" class="card-item__title"><span>ДСП 16х2800х2070 ПА-1 EGGER</span></a>
-											<div class="card-item__price">
-												<span class="price">350р. <span class="price__count">/ шт.</span></span>
-											</div>
+										<div class="sku">арт. 025365</div>
+										<a href="#" class="card-item__title"><span>ДСП 16х2800х2070 ПА-1 EGGER</span></a>
+										<a href="#" class="link-td link-td--success">EGGER</a>
+										
+									</div>
+									<div class="card-item__info">
+										<div class="card-item__price">
+											<span class="price">350р. <span class="price__count">/ шт.</span></span>
 										</div>
 										<div class="card-item__footer">
 											<div class="group-number">
@@ -444,23 +740,29 @@
 												<input type="text" class="group-number__input" value="1" readonly>
 												<button type="button" class="group-number__plus js-plus"><i class="fas fa-plus"></i></button>
 											</div>
-											<a href="#" class="btn btn--success"><i class="icon icon--shopping-cart"></i> В корзину</a>
+											<a href="#" class="btn btn--success"><svg class="icon icon-shopping-cart"><use xlink:href="#icon-shopping-cart"></use></svg> <span class="d-none d-md-inline">В корзину</span></a>
 										</div>
 									</div>
 								</div>
-								<div class="col-md-4">
-									<div class="card-item">
-										<div class="card-item__img">
-											<a href="#">
-												<img src="img/card-img3.jpg" alt="">
-											</a>
+								<div class="card-item">
+									<div class="card-item__img">
+										<a href="#">
+											<img src="img/card-img1.jpg" alt="">
+										</a>
+									</div>
+									<div class="card-item__body">
+										<div class="card-item__slider">
+											<div class="item" data-url="img/card-img1.jpg"><img src="img/preview-img.jpg" alt=""></div>
+											<div class="item" data-url="img/card-img2.jpg"><img src="img/preview-img1.jpg" alt=""></div>
 										</div>
-										<div class="card-item__body">
-											<div class="sku">арт. 025365</div>
-											<a href="#" class="card-item__title"><span>ДСП 16х2800х2070 ПА-1 EGGER</span></a>
-											<div class="card-item__price">
-												<span class="price">350р. <span class="price__count">/ шт.</span></span>
-											</div>
+										<div class="sku">арт. 025365</div>
+										<a href="#" class="card-item__title"><span>ДСП 16х2800х2070 ПА-1 EGGER ДСП 16х2800х2070 ПА-1 EGGER</span></a>
+										<a href="#" class="link-td link-td--success">EGGER</a>
+										
+									</div>
+									<div class="card-item__info">
+										<div class="card-item__price">
+											<span class="price">23 350р. <span class="price__count">/ шт.</span></span>
 										</div>
 										<div class="card-item__footer">
 											<div class="group-number">
@@ -468,23 +770,27 @@
 												<input type="text" class="group-number__input" value="1" readonly>
 												<button type="button" class="group-number__plus js-plus"><i class="fas fa-plus"></i></button>
 											</div>
-											<a href="#" class="btn btn--success"><i class="icon icon--shopping-cart"></i> В корзину</a>
+											<a href="#" class="btn btn--success"><svg class="icon icon-shopping-cart"><use xlink:href="#icon-shopping-cart"></use></svg> <span class="d-none d-md-inline">В корзину</span></a>
 										</div>
 									</div>
 								</div>
-								<div class="col-md-4">
-									<div class="card-item">
-										<div class="card-item__img">
-											<a href="#">
-												<img src="img/card-img4.jpg" alt="">
-											</a>
-										</div>
-										<div class="card-item__body">
+							</div>
+
+							<div class="card-list tab-content" id="card-list" style="display: none;">
+								<div class="card-item">
+									
+									<div class="card-item__body row">
+										<div class="col-md-4 card-item__details">
 											<div class="sku">арт. 025365</div>
-											<a href="#" class="card-item__title"><span>ДСП 16х2800х2070 ПА-1 EGGER</span></a>
-											<div class="card-item__price">
-												<span class="price">350р. <span class="price__count">/ шт.</span></span>
-											</div>
+											<a href="#" class="link-td link-td--success">EGGER</a>
+										</div>	
+										<div class="col-md-8">
+											<a href="#" class="card-item__title"><span>ЛДСП 2800х2070х16 Белый базовый W908 SМ (гладкий), Гр.W1, Egger</span></a>	
+										</div>	
+									</div>
+									<div class="card-item__info">
+										<div class="card-item__price">
+											<span class="price">350р. <span class="price__count">/ шт.</span></span>
 										</div>
 										<div class="card-item__footer">
 											<div class="group-number">
@@ -492,13 +798,185 @@
 												<input type="text" class="group-number__input" value="1" readonly>
 												<button type="button" class="group-number__plus js-plus"><i class="fas fa-plus"></i></button>
 											</div>
-											<a href="#" class="btn btn--success"><i class="icon icon--shopping-cart"></i> В корзину</a>
+											<a href="#" class="btn btn--success"><svg class="icon icon-shopping-cart"><use xlink:href="#icon-shopping-cart"></use></svg> <span class="d-none d-xl-inline">В корзину</span></a>
+										</div>
+									</div>
+								</div>
+								<div class="card-item">
+									<div class="card-item__body row">
+										<div class="col-md-4 card-item__details">
+											<div class="sku">арт. 025365</div>
+											<a href="#" class="link-td link-td--success">EGGER</a>
+										</div>	
+										<div class="col-md-8">
+											<a href="#" class="card-item__title"><span>ЛДСП 2800х2070х16</span></a>	
+										</div>	
+									</div>
+									<div class="card-item__info">
+										<div class="card-item__price">
+											<span class="price">2 350р. <span class="price__count">/ шт.</span></span>
+										</div>
+										<div class="card-item__footer">
+											<div class="group-number">
+												<button type="button" class="group-number__minus js-minus"><i class="fas fa-minus"></i></button>
+												<input type="text" class="group-number__input" value="1" readonly>
+												<button type="button" class="group-number__plus js-plus"><i class="fas fa-plus"></i></button>
+											</div>
+											<a href="#" class="btn btn--success"><svg class="icon icon-shopping-cart"><use xlink:href="#icon-shopping-cart"></use></svg> <span class="d-none d-xl-inline">В корзину</span></a>
+										</div>
+									</div>
+								</div>
+								<div class="card-item">
+									
+									<div class="card-item__body row">
+										<div class="col-md-4 card-item__details">
+											<div class="sku">арт. 025365</div>
+											<a href="#" class="link-td link-td--success">EGGER</a>
+										</div>	
+										<div class="col-md-8">
+											<a href="#" class="card-item__title"><span>ЛДСП 2800х2070х16 Белый базовый W908 SМ (гладкий), Гр.W1, Egger</span></a>	
+										</div>	
+									</div>
+									<div class="card-item__info">
+										<div class="card-item__price">
+											<span class="price">350р. <span class="price__count">/ шт.</span></span>
+										</div>
+										<div class="card-item__footer">
+											<div class="group-number">
+												<button type="button" class="group-number__minus js-minus"><i class="fas fa-minus"></i></button>
+												<input type="text" class="group-number__input" value="1" readonly>
+												<button type="button" class="group-number__plus js-plus"><i class="fas fa-plus"></i></button>
+											</div>
+											<a href="#" class="btn btn--success"><svg class="icon icon-shopping-cart"><use xlink:href="#icon-shopping-cart"></use></svg> <span class="d-none d-xl-inline">В корзину</span></a>
+										</div>
+									</div>
+								</div>
+								<div class="card-item">
+									<div class="card-item__body row">
+										<div class="col-md-4 card-item__details">
+											<div class="sku">арт. 025365</div>
+											<a href="#" class="link-td link-td--success">EGGER</a>
+										</div>	
+										<div class="col-md-8">
+											<a href="#" class="card-item__title"><span>ЛДСП 2800х2070х16</span></a>	
+										</div>	
+									</div>
+									<div class="card-item__info">
+										<div class="card-item__price">
+											<span class="price">2 350р. <span class="price__count">/ шт.</span></span>
+										</div>
+										<div class="card-item__footer">
+											<div class="group-number">
+												<button type="button" class="group-number__minus js-minus"><i class="fas fa-minus"></i></button>
+												<input type="text" class="group-number__input" value="1" readonly>
+												<button type="button" class="group-number__plus js-plus"><i class="fas fa-plus"></i></button>
+											</div>
+											<a href="#" class="btn btn--success"><svg class="icon icon-shopping-cart"><use xlink:href="#icon-shopping-cart"></use></svg> <span class="d-none d-xl-inline">В корзину</span></a>
+										</div>
+									</div>
+								</div>
+								<div class="card-item">
+									
+									<div class="card-item__body row">
+										<div class="col-md-4 card-item__details">
+											<div class="sku">арт. 025365</div>
+											<a href="#" class="link-td link-td--success">EGGER</a>
+										</div>	
+										<div class="col-md-8">
+											<a href="#" class="card-item__title"><span>ЛДСП 2800х2070х16 Белый базовый W908 SМ (гладкий), Гр.W1, Egger</span></a>	
+										</div>	
+									</div>
+									<div class="card-item__info">
+										<div class="card-item__price">
+											<span class="price">350р. <span class="price__count">/ шт.</span></span>
+										</div>
+										<div class="card-item__footer">
+											<div class="group-number">
+												<button type="button" class="group-number__minus js-minus"><i class="fas fa-minus"></i></button>
+												<input type="text" class="group-number__input" value="1" readonly>
+												<button type="button" class="group-number__plus js-plus"><i class="fas fa-plus"></i></button>
+											</div>
+											<a href="#" class="btn btn--success"><svg class="icon icon-shopping-cart"><use xlink:href="#icon-shopping-cart"></use></svg> <span class="d-none d-xl-inline">В корзину</span></a>
+										</div>
+									</div>
+								</div>
+								<div class="card-item">
+									<div class="card-item__body row">
+										<div class="col-md-4 card-item__details">
+											<div class="sku">арт. 025365</div>
+											<a href="#" class="link-td link-td--success">EGGER</a>
+										</div>	
+										<div class="col-md-8">
+											<a href="#" class="card-item__title"><span>ЛДСП 2800х2070х16</span></a>	
+										</div>	
+									</div>
+									<div class="card-item__info">
+										<div class="card-item__price">
+											<span class="price">2 350р. <span class="price__count">/ шт.</span></span>
+										</div>
+										<div class="card-item__footer">
+											<div class="group-number">
+												<button type="button" class="group-number__minus js-minus"><i class="fas fa-minus"></i></button>
+												<input type="text" class="group-number__input" value="1" readonly>
+												<button type="button" class="group-number__plus js-plus"><i class="fas fa-plus"></i></button>
+											</div>
+											<a href="#" class="btn btn--success"><svg class="icon icon-shopping-cart"><use xlink:href="#icon-shopping-cart"></use></svg> <span class="d-none d-xl-inline">В корзину</span></a>
+										</div>
+									</div>
+								</div>
+								<div class="card-item">
+									
+									<div class="card-item__body row">
+										<div class="col-md-4 card-item__details">
+											<div class="sku">арт. 025365</div>
+											<a href="#" class="link-td link-td--success">EGGER</a>
+										</div>	
+										<div class="col-md-8">
+											<a href="#" class="card-item__title"><span>ЛДСП 2800х2070х16 Белый базовый W908 SМ (гладкий), Гр.W1, Egger</span></a>	
+										</div>	
+									</div>
+									<div class="card-item__info">
+										<div class="card-item__price">
+											<span class="price">350р. <span class="price__count">/ шт.</span></span>
+										</div>
+										<div class="card-item__footer">
+											<div class="group-number">
+												<button type="button" class="group-number__minus js-minus"><i class="fas fa-minus"></i></button>
+												<input type="text" class="group-number__input" value="1" readonly>
+												<button type="button" class="group-number__plus js-plus"><i class="fas fa-plus"></i></button>
+											</div>
+											<a href="#" class="btn btn--success"><svg class="icon icon-shopping-cart"><use xlink:href="#icon-shopping-cart"></use></svg> <span class="d-none d-xl-inline">В корзину</span></a>
+										</div>
+									</div>
+								</div>
+								<div class="card-item">
+									<div class="card-item__body row">
+										<div class="col-md-4 card-item__details">
+											<div class="sku">арт. 025365</div>
+											<a href="#" class="link-td link-td--success">EGGER</a>
+										</div>	
+										<div class="col-md-8">
+											<a href="#" class="card-item__title"><span>ЛДСП 2800х2070х16</span></a>	
+										</div>	
+									</div>
+									<div class="card-item__info">
+										<div class="card-item__price">
+											<span class="price">2 350р. <span class="price__count">/ шт.</span></span>
+										</div>
+										<div class="card-item__footer">
+											<div class="group-number">
+												<button type="button" class="group-number__minus js-minus"><i class="fas fa-minus"></i></button>
+												<input type="text" class="group-number__input" value="1" readonly>
+												<button type="button" class="group-number__plus js-plus"><i class="fas fa-plus"></i></button>
+											</div>
+											<a href="#" class="btn btn--success"><svg class="icon icon-shopping-cart"><use xlink:href="#icon-shopping-cart"></use></svg> <span class="d-none d-xl-inline">В корзину</span></a>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+					<!-- / Catalog -->
 				</div>
 			</div>
 			<section class="section section-text">
@@ -702,11 +1180,38 @@
 	<div class="ball b"></div>
 	<div class="ball c"></div>
 </div>
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+	<symbol id="icon-grid" viewBox="0 0 32 32">
+	<title>grid</title>
+	<path  d="M-0-0h6.4v6.4h-6.4zM-0 12.8h6.4v6.4h-6.4zM-0 25.6h6.4v6.4h-6.4zM12.799-0h6.4v6.4h-6.4zM12.799 12.8h6.4v6.4h-6.4zM12.799 25.6h6.4v6.4h-6.4zM25.6-0h6.4v6.4h-6.4zM25.6 12.8h6.4v6.4h-6.4zM25.6 25.6h6.4v6.4h-6.4z"></path>
+	</symbol>
+	<symbol id="icon-list" viewBox="0 0 32 32">
+	<title>list</title>
+	<path  d="M-0-0h32v6.4h-32zM-0 12.8h32v6.4h-32zM-0 25.6h32v6.4h-32z"></path>
+	</symbol>
+	<symbol id="icon-list-big" viewBox="0 0 32 32">
+	<title>list-big</title>
+	<path  d="M0-0h6.399v6.4h-6.399zM0 12.8h6.399v6.4h-6.399zM0 25.6h6.399v6.4h-6.399zM12.8-0h19.2v6.4h-19.2zM12.8 12.8h19.2v6.4h-19.2zM12.8 25.6h19.2v6.4h-19.2z"></path>
+	</symbol>
+	<symbol id="icon-shopping-cart" viewBox="0 0 32 32">
+	<title>shopping-cart</title>
+	<path  d="M10.31 20.688h0.001c0.001 0 0.002-0 0.004-0h16.997c0.418 0 0.786-0.278 0.901-0.68l3.75-13.125c0.081-0.283 0.024-0.587-0.153-0.822s-0.454-0.373-0.749-0.373h-22.915l-0.67-3.016c-0.095-0.429-0.476-0.734-0.915-0.734h-5.625c-0.518 0-0.938 0.42-0.938 0.938s0.42 0.938 0.938 0.938h4.873c0.119 0.534 3.207 14.432 3.385 15.232-0.996 0.433-1.695 1.427-1.695 2.581 0 1.551 1.262 2.813 2.813 2.813h17c0.518 0 0.938-0.42 0.938-0.938s-0.42-0.938-0.938-0.938h-17c-0.517 0-0.938-0.421-0.938-0.938s0.419-0.936 0.935-0.937zM29.82 7.563l-3.214 11.25h-15.541l-2.5-11.25z"></path>
+	<path  d="M9.375 27.25c0 1.551 1.262 2.813 2.813 2.813s2.813-1.262 2.813-2.813-1.262-2.813-2.813-2.813-2.813 1.262-2.813 2.813zM12.188 26.313c0.517 0 0.938 0.421 0.938 0.938s-0.421 0.938-0.938 0.938-0.938-0.421-0.938-0.938 0.421-0.938 0.938-0.938z"></path>
+	<path  d="M22.625 27.25c0 1.551 1.262 2.813 2.813 2.813s2.813-1.262 2.813-2.813-1.262-2.813-2.813-2.813-2.813 1.262-2.813 2.813zM25.438 26.313c0.517 0 0.938 0.421 0.938 0.938s-0.421 0.938-0.938 0.938-0.938-0.421-0.938-0.938 0.421-0.938 0.938-0.938z"></path>
+	</symbol>
+	<symbol id="icon-close" viewBox="0 0 32 32">
+	<title>close</title>
+	<path  d="M3.31 32.023l-3.335-3.335 12.695-12.695-12.518-12.518 3.323-3.323 12.518 12.518 12.695-12.695 3.335 3.335-12.696 12.696 12.518 12.518-3.323 3.323-12.518-12.518z"></path>
+	</symbol>
+	</defs>
+</svg>
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/jquery.fancybox.min.js"></script>
 <script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/jquery.menu-aim.js"></script>
+<script src="js/jquery-ui.min.js"></script>
 
 <script src="js/custom.js"></script>
 </body>

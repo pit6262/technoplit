@@ -105,6 +105,23 @@ $(function(){
     $( window ).resize( setSlider );
 
 
+    $( "#slider-range" ).slider({
+        range: true,
+        min: 100,
+        max: 5000,
+        values: [ 500, 2500 ],
+        slide: function( event, ui ) {
+            $( "#f-price1" ).val( ui.values[ 0 ] );
+            $( "#f-price2" ).val( ui.values[ 1 ] );
+
+        }
+    });
+    $("#f-price1").on('change keyup paste', function() {
+        $("#slider-range").slider('values',0,$(this).val());
+    });
+    $("#f-price2").on('change keyup paste', function() {
+        $("#slider-range").slider('values',1,$(this).val());
+    });
 
 	/* ---------------------------------------------- /*
 	 * Base
@@ -193,4 +210,45 @@ $(function(){
         $submenu.css("display", "none");
         $row.removeClass("active");
     }
+
+
+    $('.card-item__slider .item').on('click', function(){
+    	var thisUrl = $(this).data('url'),
+    		thisElement = $(this)
+    	$(this).parents('.card-item__slider').find('.item').not(thisElement).removeClass('active')
+    	$(this).addClass('active').parents('.card-item').find('.card-item__img img').attr('src', thisUrl)
+    	return false;
+    })
+
+    $('.js-open-filter').on('click', function(){
+    	$('.filter').addClass('open');
+    	$('.overlay').addClass('open');
+    	return false;
+    })
+
+    $('.js-close-filter').on('click', function(){
+    	$('.filter').removeClass('open');
+    	$('.overlay').removeClass('open');
+    	return false;
+    })
+
+    $('.overlay').on('click', function(){
+    	$('.filter').removeClass('open');
+    	$(this).removeClass('open');
+    	return false;
+    })
+
+    $('.sorting-grid__link').on('click', function(){
+    	$(this).parents('.content').find('.tab-content').hide();
+    	var id = $(this).attr('href');
+		$(id).show();
+    	$('.sorting-grid__link').removeClass('active');
+    	$(this).addClass('active');
+    	return false;
+    })
+
+
+    
+
+    
 });
