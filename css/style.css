@@ -2387,6 +2387,8 @@ label {
     .card-list .card-item__price {
       width: auto;
       margin-right: 1.5rem; }
+  .card-table {
+    display: none !important; }
   /* Footer === */
   .footer {
     padding-bottom: 2rem; }
