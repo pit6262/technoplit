@@ -56,7 +56,7 @@
 						<span class="personal__icon">
 							<i class="fas fa-sign-in-alt "></i>
 						</span>
-						<a href="#" class="personal__link">Вход</a>
+						<a data-fancybox data-src="#popup-login"  href="javascript:;" class="personal__link">Вход</a>
 						<span class="personal__devider d-lg-none d-xl-block">/</span>
 						<a href="#" class="personal__link d-lg-none d-xl-block">Регистрация</a>
 					</div>
@@ -1054,6 +1054,36 @@
 	</form>
 </div>
 
+<div style="display: none;" id="popup-login" class="popup animated-modal">
+	<div class="popup__head">
+		<h2 class="popup__title">Авторизация</h2>
+	</div>
+	<form action="#">
+		<div class="form-field">
+			<label >Электронная почта:</label>
+			<input type="email" class="form-input" placeholder="Адрес почты">
+		</div>
+		<div class="form-field">
+			<label>Пароль:</label>
+			<input type="password" class="form-input " placeholder="Введите пароль">
+		</div>
+		<div class="form-field">
+			<label class="checkbox">
+				<input type="checkbox">
+				<span class="checkbox__figure"></span>
+				<span class="checkbox__text">Запомнить меня</span>
+			</label>
+		</div>
+		<input type="submit" class="btn btn--block btn--success" value="Войти">
+	</form>
+
+	<div class="popup__footer">
+		<p class="mb1"><a href="#">Забыли пароль?</a></p> 
+		<p class="mb1">Или пройдите <a href="#" >регистрацию</a></p>
+	</div>
+
+</div>
+
 <div style="display: none;" id="popup-question" class="popup animated-modal">
 	<div class="popup__head">
 		<h2 class="popup__title">Задать вопрос</h2>
@@ -1068,7 +1098,7 @@
 			<input type="email" class="form-input" placeholder="Адрес почты">
 		</div>
 		<div class="form-field">
-			<label >Ваш e-mail:</label>
+			<label >Ваш вопрос:</label>
 			<textarea class="form-input" placeholder="Ваш вопрос"></textarea>
 		</div>
 		<div class="form-field">
@@ -1112,12 +1142,12 @@
 	</defs>
 </svg>
 <script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.formstyler.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/jquery.fancybox.min.js"></script>
 <script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/jquery.menu-aim.js"></script>
 <script src="js/jquery-ui.min.js"></script>
-
 <script src="js/custom.js"></script>
 </body>
 </html>
