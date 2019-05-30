@@ -369,7 +369,10 @@ body {
   font-family: "Roboto", sans-serif; }
 
 .mb1 {
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem !important; }
+
+.mt0 {
+  margin-top: 0 !important; }
 
 .nowrap {
   white-space: nowrap; }
@@ -429,6 +432,26 @@ ul:not([class]), ol:not([class]) {
 ul:not([class]) li,
 ol:not([class]) li {
   margin-bottom: 1rem; }
+
+ul.square {
+  list-style: none;
+  margin-bottom: 2rem; }
+  ul.square li {
+    position: relative;
+    padding-left: 2.6rem;
+    min-height: 1.8rem;
+    margin-bottom: .8rem; }
+    ul.square li:last-child {
+      margin-bottom: 0; }
+    ul.square li:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: .5rem;
+      width: 1rem;
+      height: 1rem;
+      background-color: #1b9247; }
 
 img {
   display: block;
@@ -1240,6 +1263,9 @@ label {
       height: .1rem;
       background: #d6d6d6;
       top: 50%; }
+  .section .special-slider .owl-stage-outer {
+    padding-top: .8rem;
+    margin-top: -1rem; }
 
 .section-text {
   padding: 3rem 0; }
@@ -2076,7 +2102,14 @@ label {
   font-weight: 700;
   color: #1b9247; }
   .back i {
-    margin-right: 1.4rem; }
+    margin-right: 1.4rem;
+    font-size: 1.2rem; }
+  .back:hover {
+    color: #2c2e35; }
+  .back--default {
+    color: #979797; }
+    .back--default:hover {
+      color: #1b9247; }
 
 .order-button {
   margin-left: 2rem;
@@ -2137,6 +2170,13 @@ label {
 
 .rh-status {
   color: #a3a3a3; }
+
+.article__img {
+  margin-bottom: 2.5rem; }
+  .article__img--right {
+    float: right;
+    margin: 0 0 3rem 2.5rem;
+    padding: 0 !important; }
 
 /* Custom styles */
 .sticky {
@@ -2966,6 +3006,11 @@ label {
   .finale {
     display: block;
     margin-bottom: 1.5rem; }
+  /* Article === */
+  .article__img--right {
+    float: none;
+    margin: 0 0 2.5rem;
+    padding: 0 !important; }
   /* Footer === */
   .footer__item--second:after {
     display: none; }
@@ -3058,6 +3103,8 @@ label {
     width: 100%; }
   .row-history__td--number {
     width: calc(100% - 3.9rem); }
+  .box-back {
+    text-align: center; }
   /* Footer === */
   .footer {
     padding-bottom: 2rem; }
