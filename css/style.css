@@ -374,11 +374,11 @@ body {
 .word-break {
   word-break: break-all; }
 
-a:not([class]) {
+a.link-td {
   color: #1b9247;
   line-height: 1.4;
   border-bottom: .1rem solid; }
-  a:not([class]):hover {
+  a.link-td:hover {
     border-bottom-color: transparent; }
 
 h1:not([class]),
@@ -2390,7 +2390,9 @@ label {
     margin-bottom: 2rem;
     padding-left: 3.2rem; }
     .address__item a {
-      font-weight: 400; }
+      font-weight: 400;
+      color: #fff;
+      border: none; }
       .address__item a[href*="mailto"] {
         border-bottom: .1rem solid; }
       .address__item a:hover {
