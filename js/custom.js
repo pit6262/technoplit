@@ -251,4 +251,9 @@ $(function(){
     
 
     
+    $('.js-remove-card').on('click', function(){
+		$(this).parents('.row-table__td').fadeOut(500, function(){$(this).remove()});
+		return false;
+	});
+    
 });

@@ -1948,6 +1948,19 @@ label {
       right: 3rem; }
   .row-table__footer {
     padding: 2.4rem 3rem; }
+    .row-table__footer-right {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-ordinal-group: 2;
+      -webkit-order: 1;
+      -ms-flex-order: 1;
+      order: 1; }
   .row-table__title {
     color: #2c2e35;
     font-size: 1.4rem;
@@ -1957,6 +1970,39 @@ label {
     border: .1rem solid transparent; }
     .row-table__link:hover {
       border-bottom: .1rem solid; }
+  .row-table__card {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .row-table__img {
+    width: 6rem;
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+    margin-right: 3rem; }
+    .row-table__img img {
+      max-width: 100%; }
+  .row-table__remove {
+    color: #b3b3b3;
+    font-size: 1.8rem;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    right: 3rem;
+    z-index: 2; }
+    .row-table__remove:hover {
+      text-decoration: none;
+      color: #2c2e35; }
+  .row-table__price .row-table__info {
+    padding-right: 2.6rem; }
 
 .price__new, .price__old {
   color: #1b9247;
@@ -1973,19 +2019,34 @@ label {
   text-decoration: line-through;
   margin-right: 0; }
 
-.finale__price {
-  color: #1b9247;
-  font-size: 2.6rem;
-  font-weight: 700;
-  margin-left: 1rem;
-  font-family: "Roboto", sans-serif;
-  white-space: nowrap; }
+.finale {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  line-height: 1.4; }
+  .finale__price {
+    color: #1b9247;
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-left: 1rem;
+    font-family: "Roboto", sans-serif;
+    white-space: nowrap;
+    line-height: 1.4; }
 
 .back {
   font-weight: 700;
   color: #1b9247; }
   .back i {
     margin-right: 1.4rem; }
+
+.order-button {
+  margin-left: 2rem;
+  display: inline-block; }
 
 /* Custom styles */
 .hide {
@@ -2050,7 +2111,15 @@ label {
       color: #000; }
 
 .group-number {
-  position: relative; }
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 9.8rem; }
+  .group-number.center {
+    margin-left: auto;
+    margin-right: auto; }
   .group-number__input {
     height: 3.6rem;
     border: .1rem solid #d6d6d6;
@@ -2065,6 +2134,11 @@ label {
     .group-number__input:focus {
       border-color: #1b9247; }
   .group-number__minus, .group-number__plus {
+    width: 2.6rem;
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
     background-color: #fff;
     border: .1rem solid #d6d6d6;
     font-weight: 700;
@@ -2077,6 +2151,10 @@ label {
       color: #fff;
       background: #1b9247;
       border-color: #1b9247 !important; }
+  .group-number__plus {
+    border-left: none; }
+  .group-number__minus {
+    border-right: none; }
 
 .owl-carousel {
   display: block !important; }
@@ -2532,6 +2610,11 @@ label {
     display: none; }
   .card-table .card-item__img {
     width: 12rem; }
+  /* Order === */
+  .row-table__card {
+    display: block; }
+  .row-table__img {
+    display: none; }
   /* Footer === */
   .footer__bottom {
     margin-top: 1.6rem;
@@ -2545,7 +2628,30 @@ label {
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .subscribe p {
-    margin-bottom: 0; } }
+    margin-bottom: 0; }
+  .row-table__counter {
+    max-width: 18.666667% !important;
+    -webkit-box-flex: 1 !important;
+    -webkit-flex: 1 0 18.666667% !important;
+    -ms-flex: 1 0 18.666667% !important;
+    flex: 1 0 18.666667% !important; }
+  .row-table__product {
+    max-width: 28.333333% !important;
+    -webkit-box-flex: 1 !important;
+    -webkit-flex: 1 0 28.333333% !important;
+    -ms-flex: 1 0 28.333333% !important;
+    flex: 1 0 28.333333% !important; }
+  .row-table__price {
+    max-width: 19.666667% !important;
+    -webkit-box-flex: 1 !important;
+    -webkit-flex: 1 0 19.666667% !important;
+    -ms-flex: 1 0 19.666667% !important;
+    flex: 1 0 19.666667% !important; } }
+
+@media screen and (min-width: 768px) {
+  .md-center {
+    margin-left: auto;
+    margin-right: auto; } }
 
 @media screen and (max-width: 767px) {
   .btn, a.btn {
@@ -2698,6 +2804,19 @@ label {
   .row-table__td {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem; }
+  .row-table__remove {
+    top: 2.6rem;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none; }
+  .row-table__product .row-table__info {
+    padding-right: 2.6rem; }
+  .row-table__footer-right {
+    display: block;
+    -webkit-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0; }
   .row-table__flex-mobile {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2720,8 +2839,18 @@ label {
       flex: 1;
       margin-bottom: 2rem; }
   .order-button {
+    display: block;
+    margin-left: 0;
     margin-bottom: 2rem; }
+    .order-button .btn {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      max-width: 20rem; }
   .finale {
+    display: block;
     margin-bottom: 1.5rem; }
   /* Footer === */
   .footer__item--second:after {
@@ -2792,6 +2921,12 @@ label {
       margin-right: 1.5rem; }
   .card-table {
     display: none !important; }
+  /* order === */
+  .row-table__remove {
+    top: auto;
+    bottom: 2.6rem; }
+  .row-table__product .row-table__info {
+    padding-right: 0; }
   /* Footer === */
   .footer {
     padding-bottom: 2rem; }
