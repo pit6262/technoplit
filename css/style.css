@@ -2093,17 +2093,17 @@ label {
 .card .card-item__footer {
   margin-top: 3rem; }
 
-.card-brands {
-  -webkit-box-flex: 0 !important;
-  -webkit-flex: none !important;
-  -ms-flex: none !important;
-  flex: none !important; }
-
-.card-delivery {
-  -webkit-box-flex: 1 !important;
-  -webkit-flex: 1 !important;
-  -ms-flex: 1 !important;
-  flex: 1 !important; }
+@media screen and (min-width: 992px) {
+  .card-brands {
+    -webkit-box-flex: 0 !important;
+    -webkit-flex: none !important;
+    -ms-flex: none !important;
+    flex: none !important; }
+  .card-delivery {
+    -webkit-box-flex: 1 !important;
+    -webkit-flex: 1 !important;
+    -ms-flex: 1 !important;
+    flex: 1 !important; } }
 
 .card-description {
   border-bottom: .1rem solid #d6d6d6;
