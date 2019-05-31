@@ -54,6 +54,53 @@ $(function(){
 		})
 	}
 
+	if($('.recently-watched').length){
+	    $('.recently-watched').owlCarousel({
+			navText: ['<i class="fas fa-chevron-left"></i>','<i class="fas fa-chevron-right"></i>'],
+			margin:30,
+			nav:true,
+			responsive:{
+				0:{
+			        items:1,
+			        autoWidth: true,
+			    },
+			    576:{
+			        items:2
+			    },
+			    768:{
+			        items:3
+			    },
+			    992:{
+			        items:4
+			    },
+
+			}
+		})
+	}
+
+	
+
+	if($('.slider-for').length){
+	     $('.slider-for').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			fade: true,
+			asNavFor: '.slider-nav'
+		});
+		$('.slider-nav').slick({
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			asNavFor: '.slider-for',
+			variableWidth: true,
+			prevArrow: '<button class="slick-prev slick-arrow"><svg class="icon icon-arrow-left"><use xlink:href="#icon-arrow-left"></use></svg></button>',
+			nextArrow: '<button class="slick-next slick-arrow"><svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg></button>',
+			focusOnSelect: true
+		});
+		
+	}
+
+
 	if($('.brands-slider').length){
 		$('.brands-slider').owlCarousel({
 			navText: ['<i class="fas fa-chevron-left"></i>','<i class="fas fa-chevron-right"></i>'],
@@ -137,6 +184,13 @@ $(function(){
 		 }
 		
 		return false
+	});
+
+	$('a.anchor').bind('click.smoothscroll',function () {
+		var target = $(this).attr('href'),
+            bl_top = $(target).offset().top;
+		$('body,html').animate({scrollTop: bl_top}, 900);
+		return false;
 	});
 
 	$('.js-minus').click(function () {
@@ -287,6 +341,9 @@ $(function(){
 		 });
 	      
 	};
+
+
+	
 });
 
 if($('#aside').length){
@@ -332,5 +389,66 @@ if($('#aside').length){
 	  }, false);
 	}
 	})()
+
+}
+
+if($('#map-1, #map-2').length){
+ymaps.ready(init); // карта соберется после загрузки скрипта и элементов
+	var myMap1; // заглобалим переменную карты чтобы можно было ею вертеть из любого места
+	function init () { // функция - собиралка карты и фигни
+	   var myMap = new ymaps.Map("map-1", {
+        center: [55.635691, 37.009368], 
+        zoom: 14,
+        controls: ['geolocationControl', 'zoomControl']
+    	});
+    	myMap.behaviors.disable('scrollZoom', 'drag'); 
+
+    	myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            // hintContent: 'Собственный значок метки',
+            // balloonContent: 'Это красивая метка'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: 'img/pin.png',
+            // Размеры метки.
+            iconImageSize: [43, 45],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            
+        })
+
+
+    	
+	    var myMap2 = new ymaps.Map("map-2", {
+	        center: [55.656473, 37.256728], 
+	        zoom: 14,
+	        controls: ['geolocationControl', 'zoomControl']
+	    });
+	    myMap2.behaviors.disable('scrollZoom', 'drag'); 
+	    myPlacemark2 = new ymaps.Placemark(myMap2.getCenter(), {
+            // hintContent: 'Собственный значок метки',
+            // balloonContent: 'Это красивая метка'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: 'img/pin.png',
+            // Размеры метки.
+            iconImageSize: [43, 45],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            
+        })
+
+		/* Добавляем метки на карту */
+		myMap.geoObjects.add(myPlacemark);
+		myMap2.geoObjects.add(myPlacemark2);
+	}
+    
+
+
 
 }
