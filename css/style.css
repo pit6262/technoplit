@@ -2124,6 +2124,7 @@ label {
 
 .info-block {
   height: 100%;
+  min-height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2148,6 +2149,7 @@ label {
   -ms-flex-direction: column;
   flex-direction: column;
   height: 100%;
+  min-height: 100%;
   text-align: center;
   width: 100%; }
   .brands-block__img {
@@ -2172,6 +2174,7 @@ label {
 
 .delivery-block {
   height: 100%;
+  min-height: 100%;
   margin-bottom: 0;
   width: 100%; }
   .delivery-block__wrap {
