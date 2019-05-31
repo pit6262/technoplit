@@ -2076,6 +2076,12 @@ label {
 .card-info, .card-delivery, .card-brands {
   margin-bottom: 3rem; }
 
+.card-delivery, .card-brands {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
 .card-price {
   font-family: "Roboto", sans-serif;
   color: #1b9247;
@@ -2142,7 +2148,8 @@ label {
   -ms-flex-direction: column;
   flex-direction: column;
   height: 100%;
-  text-align: center; }
+  text-align: center;
+  width: 100%; }
   .brands-block__img {
     margin-bottom: 2.5rem;
     min-height: 40%;
@@ -2165,7 +2172,8 @@ label {
 
 .delivery-block {
   height: 100%;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  width: 100%; }
   .delivery-block__wrap {
     display: -webkit-box;
     display: -webkit-flex;
