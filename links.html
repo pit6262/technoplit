@@ -5,32 +5,38 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
 	<title>Links</title>
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/style.css?ver1.0" />		
+	<link rel="stylesheet" type="text/css" href="css/style.css?ver1.0" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css" />
+	<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
+	
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 			
 </head>
 <body class="loaded">
 <style>
 	body {
 		color: #444;
-		font-family: 'Roboto', sans-serif
+		font-family: 'Roboto', sans-serif;
+		display: block;
 	}
 	.wrapper {
 		max-width: 1200px;
 		padding: 40px;
 		margin: 0 auto;
-		display: flex;
-		flex-wrap: wrap;
+		
 
 
 	}
-	.wrapper > div {
-		flex: 1;
-	}
+
 	ul {
 		list-style: none;
 		margin-bottom: 30px;
-		width: 33.33%;
+		margin-left: 0 !important;
+		
 	}
 	.ul-wrap {
 		display: flex;
@@ -54,10 +60,12 @@
 		font-size: 16px;
 		line-height: 20px;
 
+
 	}
 
 	a:hover {
 		color: #333;
+		text-decoration: underline;
 	}
 
 	a span {
@@ -75,8 +83,8 @@
 		font-size: 50px;
 		line-height: 60px;
 		color: #333;
-		text-align: center;
-		padding: 20px 0 40px;
+		
+		
 	}
 	h4 {
 		color: #333;
@@ -87,32 +95,172 @@
 
 </style>
 
-
-
-<div class="wrapper">
-	<div>
-		<h2>Ссылки</h2>
-		<div class="ul-wrap">
-			<ul>
-				<li><a href="index.html">Главная <span>(ipad)</span> <strong>(iphone)</strong></a></li>
-				<li><a href="catalog.html">Каталог <span>(ipad)</span> <strong>(iphone)</strong></a></li>
-				<li><a href="card.html">Карточка товара <span>(ipad)</span> <strong>(iphone)</strong></a></li>
-				<li><a href="news.html">Список новостей <span>(ipad)</span> <strong>(iphone)</strong></a></li>
-				<li><a href="registration.html">Регистрация <span>(ipad)</span> <strong>(iphone)</strong></a></li>
-				<li><a href="order.html">Оформление заказа <span>(ipad)</span> <strong>(iphone)</strong></a></li>
-				<li><a href="cart.html">Корзина товаров <span>(ipad)</span> <strong>(iphone)</strong></a></li>
-				<li><a href="profile.html">Личный кабинет <span>(ipad)</span> <strong>(iphone)</strong></a></li>
-				<li><a href="about.html">О компани <span>(ipad)</span> <strong>(iphone)</strong></a></li>
-				<li><a href="news_item.html">Новость детально <span>(ipad)</span> <strong>(iphone)</strong></a></li>
-				<li><a href="delivery.html">Доставка и оплата <span>(ipad)</span> <strong>(iphone)</strong></a></li>
-				<li><a href="contacts.html">Контакты <span>(ipad)</span> <strong>(iphone)</strong></a></li>
-			</ul>
+<div class="main-wrapper">
+	<div class="main">
+		<div class="wrapper">
+			<div>
+				<h2>Ссылки</h2>
+				<div class="ul-wrap">
+					<ul>
+						<li><a href="index.html">Главная </a></li>
+						<li><a href="catalog.html">Каталог </a></li>
+						<li><a href="card.html">Карточка товара </a></li>
+						<li><a href="news.html">Список новостей </a></li>
+						<li><a href="registration.html">Регистрация </a></li>
+						<li><a href="order.html">Оформление заказа </a></li>
+						<li><a href="cart.html">Корзина товаров </a></li>
+						<li><a href="profile.html">Личный кабинет </a></li>
+						<li><a href="about.html">О компани </a></li>
+						<li><a href="news_item.html">Новость детально </a></li>
+						<li><a href="delivery.html">Доставка и оплата </a></li>
+						<li><a href="contacts.html">Контакты </a></li>
+					</ul>
+					
+				</div>
+				<h2>Popup</h2>
+				<div class="ul-wrap">
+					<ul>
+						<li><a data-fancybox data-src="#popup-callback" data-animation-duration="500" href="javascript:;">Заказать звонок </a></li>
+						<li><a data-fancybox data-src="#popup-login" data-animation-duration="500" href="javascript:;">Авторизация </a></li>
+						<li><a data-fancybox data-src="#popup-question" data-animation-duration="500" href="javascript:;">Задать вопрос </a></li>
+						
+						
+					</ul>
+					
+				</div>
+			</div>
 			
 		</div>
 	</div>
-	
+
+
 </div>
 
 
+
+<div style="display: none;" id="popup-callback" class="popup animated-modal">
+	<div class="popup__head">
+		<h2 class="popup__title">Заказать звонок</h2>
+	</div>
+	<form action="#">
+		<div class="form-field">
+			<label>Ваше имя:</label>
+			<input type="text" class="form-input" placeholder="Имя">
+		</div>
+		<div class="form-field">
+			<label>Номер телефона:</label>
+			<input type="text" class="form-input tel-mask" placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _">
+		</div>
+		<input type="submit" class="btn btn--block btn--success" value="Перезвоните мне">
+	</form>
+</div>
+
+<div style="display: none;" id="popup-login" class="popup animated-modal">
+	<div class="popup__head">
+		<h2 class="popup__title">Авторизация</h2>
+	</div>
+	<form action="#">
+		<div class="form-field">
+			<label >Электронная почта:</label>
+			<input type="email" class="form-input" placeholder="Адрес почты">
+		</div>
+		<div class="form-field">
+			<label>Пароль:</label>
+			<input type="password" class="form-input " placeholder="Введите пароль">
+		</div>
+		<div class="form-field">
+			<label class="checkbox">
+				<input type="checkbox">
+				<span class="checkbox__figure"></span>
+				<span class="checkbox__text">Запомнить меня</span>
+			</label>
+		</div>
+		<input type="submit" class="btn btn--block btn--success" value="Войти">
+	</form>
+
+	<div class="popup__footer">
+		<p class="mb1"><a href="#" class="link-td">Забыли пароль?</a></p> 
+		<p class="mb1">Или пройдите <a href="#" class="link-td">регистрацию</a></p>
+	</div>
+
+</div>
+
+<div style="display: none;" id="popup-question" class="popup animated-modal">
+	<div class="popup__head">
+		<h2 class="popup__title">Задать вопрос</h2>
+	</div>
+	<form action="#">
+		<div class="form-field">
+			<label >Ваше имя:</label>
+			<input type="text" class="form-input" placeholder="Имя">
+		</div>
+		<div class="form-field">
+			<label >Ваш e-mail:</label>
+			<input type="email" class="form-input" placeholder="Адрес почты">
+		</div>
+		<div class="form-field">
+			<label >Ваш вопрос:</label>
+			<textarea class="form-input" placeholder="Ваш вопрос"></textarea>
+		</div>
+		<div class="form-field">
+			<img src="img/capcha.png" alt="">
+		</div>
+		
+		<input type="submit" class="btn btn--block btn--success" value="Отправить">
+	</form>
+</div>
+
+<div class="overlay"></div>
+<div class="icon-load">
+	<div class="ball a"></div>
+	<div class="ball b"></div>
+	<div class="ball c"></div>
+</div>
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+	<symbol id="icon-arrow-right" viewBox="0 0 17 32">
+	<title>arrow-right</title>
+	<path  d="M1.231 32v0l16-16-16-16-1.231 1.231 14.769 14.769-14.769 14.769z"></path>
+	</symbol>
+	<symbol id="icon-arrow-left" viewBox="0 0 17 32">
+	<title>arrow-left</title>
+	<path  d="M16 32v0l-16-16 16-16 1.23 1.231-14.769 14.769 14.769 14.769z"></path>
+	</symbol>
+	<symbol id="icon-grid" viewBox="0 0 32 32">
+	<title>grid</title>
+	<path  d="M-0-0h6.4v6.4h-6.4zM-0 12.8h6.4v6.4h-6.4zM-0 25.6h6.4v6.4h-6.4zM12.799-0h6.4v6.4h-6.4zM12.799 12.8h6.4v6.4h-6.4zM12.799 25.6h6.4v6.4h-6.4zM25.6-0h6.4v6.4h-6.4zM25.6 12.8h6.4v6.4h-6.4zM25.6 25.6h6.4v6.4h-6.4z"></path>
+	</symbol>
+	<symbol id="icon-list" viewBox="0 0 32 32">
+	<title>list</title>
+	<path  d="M-0-0h32v6.4h-32zM-0 12.8h32v6.4h-32zM-0 25.6h32v6.4h-32z"></path>
+	</symbol>
+	<symbol id="icon-list-big" viewBox="0 0 32 32">
+	<title>list-big</title>
+	<path  d="M0-0h6.399v6.4h-6.399zM0 12.8h6.399v6.4h-6.399zM0 25.6h6.399v6.4h-6.399zM12.8-0h19.2v6.4h-19.2zM12.8 12.8h19.2v6.4h-19.2zM12.8 25.6h19.2v6.4h-19.2z"></path>
+	</symbol>
+	<symbol id="icon-shopping-cart" viewBox="0 0 32 32">
+	<title>shopping-cart</title>
+	<path  d="M10.31 20.688h0.001c0.001 0 0.002-0 0.004-0h16.997c0.418 0 0.786-0.278 0.901-0.68l3.75-13.125c0.081-0.283 0.024-0.587-0.153-0.822s-0.454-0.373-0.749-0.373h-22.915l-0.67-3.016c-0.095-0.429-0.476-0.734-0.915-0.734h-5.625c-0.518 0-0.938 0.42-0.938 0.938s0.42 0.938 0.938 0.938h4.873c0.119 0.534 3.207 14.432 3.385 15.232-0.996 0.433-1.695 1.427-1.695 2.581 0 1.551 1.262 2.813 2.813 2.813h17c0.518 0 0.938-0.42 0.938-0.938s-0.42-0.938-0.938-0.938h-17c-0.517 0-0.938-0.421-0.938-0.938s0.419-0.936 0.935-0.937zM29.82 7.563l-3.214 11.25h-15.541l-2.5-11.25z"></path>
+	<path  d="M9.375 27.25c0 1.551 1.262 2.813 2.813 2.813s2.813-1.262 2.813-2.813-1.262-2.813-2.813-2.813-2.813 1.262-2.813 2.813zM12.188 26.313c0.517 0 0.938 0.421 0.938 0.938s-0.421 0.938-0.938 0.938-0.938-0.421-0.938-0.938 0.421-0.938 0.938-0.938z"></path>
+	<path  d="M22.625 27.25c0 1.551 1.262 2.813 2.813 2.813s2.813-1.262 2.813-2.813-1.262-2.813-2.813-2.813-2.813 1.262-2.813 2.813zM25.438 26.313c0.517 0 0.938 0.421 0.938 0.938s-0.421 0.938-0.938 0.938-0.938-0.421-0.938-0.938 0.421-0.938 0.938-0.938z"></path>
+	</symbol>
+	<symbol id="icon-close" viewBox="0 0 32 32">
+	<title>close</title>
+	<path  d="M3.31 32.023l-3.335-3.335 12.695-12.695-12.518-12.518 3.323-3.323 12.518 12.518 12.695-12.695 3.335 3.335-12.696 12.696 12.518 12.518-3.323 3.323-12.518-12.518z"></path>
+	</symbol>
+	</defs>
+</svg>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.formstyler.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+<script src="js/jquery.menu-aim.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=dfeede90-0c41-4832-a234-cf7898175c75&lang=ru_RU"
+  type="text/javascript">
+  </script>
+<script src="js/custom.js"></script>
 </body>
 </html>
