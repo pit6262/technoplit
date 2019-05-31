@@ -2123,7 +2123,6 @@ label {
     margin: 4rem 0 3rem; }
 
 .info-block {
-  height: 100%;
   min-height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2148,7 +2147,6 @@ label {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
   min-height: 100%;
   text-align: center;
   width: 100%; }
@@ -2173,7 +2171,6 @@ label {
     margin-top: auto; }
 
 .delivery-block {
-  height: 100%;
   min-height: 100%;
   margin-bottom: 0;
   width: 100%; }
