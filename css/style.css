@@ -898,6 +898,9 @@ label {
   column-count: 3;
   -webkit-column-gap: 3rem;
   column-gap: 3rem; }
+  .column-3 > * {
+    display: inline-block;
+    width: 100%; }
 
 /* 4. HEADER */
 /* ================================================ */
@@ -3701,9 +3704,17 @@ label {
     max-width: 70%; }
   .fancybox-slide--html .fancybox-close-small {
     right: -14px !important;
-    top: -40px !important; } }
+    top: -40px !important; }
+  .column-3 {
+    -webkit-column-count: 2;
+    column-count: 2; } }
 
 @media screen and (max-width: 575px) {
+  .form-dropdown {
+    margin-bottom: 1.5rem; }
+  .column-3 {
+    -webkit-column-count: auto;
+    column-count: auto; }
   /* header === */
   .header__middle .container {
     -webkit-box-pack: start;
