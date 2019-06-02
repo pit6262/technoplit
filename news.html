@@ -73,10 +73,9 @@
 				<div class="header__middle-item">
 					<div class="geo-pos">
 						<div class="geo-pos__icon"><i class="fas fa-map-marker-alt"></i></div>
-						<div class="geo-pos__selected">
-							<div class="geo-pos__text">Москва</div>
-							<div class="geo-pos__arrow"><i class="fas fa-chevron-down"></i></div>
-						</div>
+						<a data-fancybox data-src="#popup-geo"  href="javascript:;" class="geo-pos__link">
+							Москва <span class="geo-pos__arrow"><i class="fas fa-chevron-down"></i></span>
+						</a>
 					</div>
 					<div class="work-time">
 						<div class="work-time__icon">
@@ -93,6 +92,7 @@
 					</div>
 					<a data-fancybox data-src="#popup-callback" data-animation-duration="500" href="javascript:;" class="phone__callback btn">Заказать звонок</a>
 				</div>
+				<a href="#" class="toggle-search d-md-none">toggle search</a>
 			</div>
 		</div>
 	
@@ -180,6 +180,129 @@
 			</div>
 		</nav>
 	</header>
+	
+	<nav class="navbar-mobile">
+		<div class="navbar-mobile__body">
+			<button class="navbar-mobile__close">
+				<svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path></svg>
+			</button>
+			<div class="navbar-mobile__top">
+				<div class=" personal ">
+					<span class="personal__icon">
+						<i class="fas fa-sign-in-alt "></i>
+					</span>
+					<a data-fancybox data-src="#popup-login"  href="javascript:;" class="personal__link">Вход</a>
+					<span class="personal__devider d-lg-none d-xl-block">/</span>
+					<a href="#" class="personal__link d-lg-none d-xl-block">Регистрация</a>
+				</div>
+			</div>
+			<ul class="mobile-menu-dropdown"> 
+				<li class="mobile-menu-dropdown__back">
+					<a href="#"><i class="fas fa-chevron-left"></i> Назад</a>
+				</li>
+				<li>
+					<a href="#">Панели ДСП</a>
+				</li>
+				<li>
+					<a href="#">ЛДСП</a>
+				</li>
+				<li class="mmd-menu">
+					<a href="#">Панели МДФ</a>
+					<ul>
+						<li>
+							<a href="#">МДФ лакированный (Невский ламинат)</a>
+						</li>
+						<li>
+							<a href="#">МДФ Egger Россия</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mmd-menu">
+					<a href="#">ЛМДФ</a>
+					<ul>
+						<li>
+							<a href="#">ЛМДФ 234</a>
+						</li>
+						<li>
+							<a href="#">ЛМДФ 678</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">ДВП</a>
+				</li>
+				<li>
+					<a href="#">Столешницы</a>
+				</li>
+				<li>
+					<a href="#">Плиты TSS</a>
+				</li>
+				<li>
+					<a href="#">Мебельная фурнитура</a>
+				</li>
+				<li>
+					<a href="#">Расходные материалы</a>
+				</li>
+				<li>
+					<a href="#">Акции</a>
+				</li>
+				<li>
+					<a href="#">Фасады</a>
+				</li>
+			</ul>
+	
+			<ul class="mobile-menu"> 
+				<li class="mobile-menu__item">
+					<a href="#" class="mobile-menu__link">О компании</a>
+				</li>
+				<li class="mobile-menu__item">
+					<a href="#" class="mobile-menu__link">Партнёрство</a>
+				</li>
+				<li class="mobile-menu__item">
+					<a href="#" class="mobile-menu__link">Оплата и доставка</a>
+				</li>
+				<li class="mobile-menu__item">
+					<a href="#" class="mobile-menu__link">Новости</a>
+				</li>
+				<li class="mobile-menu__item">
+					<a href="#" class="mobile-menu__link">Контакты</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	
+	<div class="search-mobile">
+		<div class="container">
+			<form action="#" >
+				<div class="form-dropdown drop">
+					<div class="form-dropdown__input">
+						<div class="search-mobile__form">
+							<input type="text" class="form-input search-mobile__input" value="">
+							<input type="submit" class="search-mobile__button" value="">
+						</div>
+					</div>
+					<ul class="form-dropdown__list drop-list">
+						<li class="form-dropdown__item ">
+							<a href="#" class="form-dropdown__link">Серпухов, Московская область</a>
+						</li>
+						<li class="form-dropdown__item">
+							<a href="#" class="form-dropdown__link">Серпухов-15, Московская область</a>
+						</li>
+						<li class="form-dropdown__item">
+							<a href="#" class="form-dropdown__link">Серпухов-13, Московская область</a>
+						</li>
+						<li class="form-dropdown__item">
+							<a href="#" class="form-dropdown__link">Серпухов-12, Московская область</a>
+						</li>
+						<li class="form-dropdown__item">
+							<a href="#" class="form-dropdown__link">Серпухов-11, Московская область</a>
+						</li>
+					</ul>
+				</div>
+				
+			</form>
+		</div>
+	</div>
 	<!-- HEADER EOF   -->
 
 	<!-- BEGIN CONTENT -->
@@ -409,6 +532,153 @@
 </div>
 <!-- BODY EOF   -->
 
+
+<div style="display: none;" id="popup-geo" class="popup animated-modal">
+	<div class="popup__head">
+		<h2 class="popup__title">Выберите свой город</h2>
+	</div>
+	<form action="#">
+		<ul class="list-check column-3">
+			<li class="list-check__item">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span class="checkbox__figure"></span>
+					<span class="checkbox__text">Москва</span>
+				</label>
+			</li>
+			<li class="list-check__item">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span class="checkbox__figure"></span>
+					<span class="checkbox__text">Санкт-петербург</span>
+				</label>
+			</li>
+			<li class="list-check__item">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span class="checkbox__figure"></span>
+					<span class="checkbox__text">Волгоград</span>
+				</label>
+			</li>
+			<li class="list-check__item">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span class="checkbox__figure"></span>
+					<span class="checkbox__text">Воронеж</span>
+				</label>
+			</li>
+			<li class="list-check__item">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span class="checkbox__figure"></span>
+					<span class="checkbox__text">Екатеринбург</span>
+				</label>
+			</li>
+			<li class="list-check__item">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span class="checkbox__figure"></span>
+					<span class="checkbox__text">Красноярск</span>
+				</label>
+			</li>
+			<li class="list-check__item">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span class="checkbox__figure"></span>
+					<span class="checkbox__text">Краснодар</span>
+				</label>
+			</li>
+			<li class="list-check__item">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span class="checkbox__figure"></span>
+					<span class="checkbox__text">Нижний Новгород</span>
+				</label>
+			</li>
+			<li class="list-check__item">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span class="checkbox__figure"></span>
+					<span class="checkbox__text">Новосибирск</span>
+				</label>
+			</li>
+			<li class="list-check__item">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span class="checkbox__figure"></span>
+					<span class="checkbox__text">Пермь</span>
+				</label>
+			</li>
+			<li class="list-check__item">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span class="checkbox__figure"></span>
+					<span class="checkbox__text">Ростов-на-Дону</span>
+				</label>
+			</li>
+			<li class="list-check__item">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span class="checkbox__figure"></span>
+					<span class="checkbox__text">Самара</span>
+				</label>
+			</li>
+			<li class="list-check__item">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span class="checkbox__figure"></span>
+					<span class="checkbox__text">Санкт-Петербург</span>
+				</label>
+			</li>
+			<li class="list-check__item">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span class="checkbox__figure"></span>
+					<span class="checkbox__text">Уфа</span>
+				</label>
+			</li>
+			<li class="list-check__item">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span class="checkbox__figure"></span>
+					<span class="checkbox__text">Челябинск</span>
+				</label>
+			</li>
+		</ul>
+		
+		<div class="popup__head">
+			<h2 class="popup__title">Или укажите в поле</h2>
+		</div>
+		<div class="row">
+			<div class="col-lg-8">
+				<div class="form-dropdown drop">
+					<div class="form-dropdown__input"><input type="text" class="form-input" value=""></div>
+					<ul class="form-dropdown__list drop-list">
+						<li class="form-dropdown__item ">
+							<a href="#" class="form-dropdown__link">Серпухов, Московская область</a>
+						</li>
+						<li class="form-dropdown__item">
+							<a href="#" class="form-dropdown__link">Серпухов-15, Московская область</a>
+						</li>
+						<li class="form-dropdown__item">
+							<a href="#" class="form-dropdown__link">Серпухов-13, Московская область</a>
+						</li>
+						<li class="form-dropdown__item">
+							<a href="#" class="form-dropdown__link">Серпухов-12, Московская область</a>
+						</li>
+						<li class="form-dropdown__item">
+							<a href="#" class="form-dropdown__link">Серпухов-11, Московская область</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<input type="submit" class="btn btn--block btn--success" value="Выбрать">
+			</div>
+		</div>
+		
+	</form>
+</div>
 
 <div style="display: none;" id="popup-callback" class="popup animated-modal">
 	<div class="popup__head">
