@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+	<title>Оплата и доставка</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css?ver1.0" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css" />
+	<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
+	
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body class="loaded">
+
+
+<!-- BEGIN BODY -->
+<div class="main-wrapper">
+
+	<!-- BEGIN HEADER -->
+	
+	
+	<header class="header">
+		<div class="header__top">
+			<div class="container">
+				<button class="nav-toggle d-md-block d-lg-none">
+					<span class="bars bars--dark ">
+						<span></span>
+						<span></span>
+						<span></span>
+					</span>
+					<span class="nav-toggle__text">Меню</span>
+				</button>
+				
+				<nav class="header__nav nav-menu">
+					<a href="#" class="nav-menu__link">О компании</a>
+					<a href="#" class="nav-menu__link">Партнёрство</a>
+					<a href="#" class="nav-menu__link">Оплата и доставка</a>
+					<a href="#" class="nav-menu__link">Новости</a>
+					<a href="#" class="nav-menu__link">Контакты</a>
+				</nav>
+				<div class="header__top-right">
+					<a href="#" class="header__basket basket">
+						<div class="basket__qnt">
+							<i class="fas fa-shopping-cart"></i>
+							<span class="basket__qnt-count">4</span>
+						</div>
+						<div class="basket__text">В корзине: <span class="basket__sum">3 500р.</span></div>
+					</a>
+	
+					<div class="header__personal personal ">
+						<span class="personal__icon">
+							<i class="fas fa-sign-in-alt "></i>
+						</span>
+						<a data-fancybox data-src="#popup-login"  href="javascript:;" class="personal__link">Вход</a>
+						<span class="personal__devider d-lg-none d-xl-block">/</span>
+						<a href="#" class="personal__link d-lg-none d-xl-block">Регистрация</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header__middle">
+			<div class="container">
+				<div class="logo">
+					<a href="#">
+						<img src="img/logo.svg" alt="">
+					</a>
+				</div>
+				<div class="header__middle-item">
+					<div class="geo-pos">
+						<div class="geo-pos__icon"><i class="fas fa-map-marker-alt"></i></div>
+						<a data-fancybox data-src="#popup-geo"  href="javascript:;" class="geo-pos__link">
+							Москва <span class="geo-pos__arrow"><i class="fas fa-chevron-down"></i></span>
+						</a>
+					</div>
+					<div class="work-time">
+						<div class="work-time__icon">
+							<i class="fas fa-clock"></i>
+						</div>
+						<div class="work-time__text"><span class="nowrap">Пн-пт</span>, <br class="d-none d-lg-block d-xl-none"> <span class="nowrap">с 9.00 до 18.00</span></div>
+					</div>
+				</div>
+				
+				<div class="header__phone phone">
+					<div class="phone__number">
+						<div class="phone__icon"><i class="fas fa-phone"></i></div>
+						<a href="tel:74957376009" class="phone__link">7 (495) 737-60-09</a>
+					</div>
+					<a data-fancybox data-src="#popup-callback" data-animation-duration="500" href="javascript:;" class="phone__callback btn">Заказать звонок</a>
+				</div>
+				<a href="#" class="toggle-search d-md-none">toggle search</a>
+			</div>
+		</div>
+	
+		<nav class="navbar">
+			<div class="container">
+				<ul class="navbar-menu">
+					<li class="navbar-menu__item navbar-menu__item--catalog dropdown-item">
+						<a href="#" class="navbar-menu__link ">
+							<span class="bars">
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>
+							<span>Каталог</span>
+						</a>
+						<div class="dropdown-block ">
+							<ul class="dropdown-nav">
+								<li data-submenu-id="submenu1" class="dropdown-nav__item">
+									<a  href="#" class="dropdown-nav__link">Панели ДСП</a>
+								</li>
+								<li data-submenu-id="submenu2" class="dropdown-nav__item">
+									<a  href="#" class="dropdown-nav__link">ЛДСП</a>
+									<ul class="dropdown-subnav" id="submenu2">
+										
+										<li class="dropdown-subnav__item">
+											<a href="#" class="dropdown-subnav__link">МДФ Egger Россия</a>
+										</li>
+										<li class="dropdown-subnav__item">
+											<a href="#" class="dropdown-subnav__link">МДФ лакированный (Невский ламинат)</a>
+										</li>
+									</ul>
+								</li>
+								<li data-submenu-id="submenu3" class="dropdown-nav__item">
+									<a  href="#" class="dropdown-nav__link">Панели МДФ</a>
+									<ul class="dropdown-subnav" id="submenu3">
+										<li class="dropdown-subnav__item">
+											<a href="#" class="dropdown-subnav__link">МДФ лакированный (Невский ламинат)</a>
+										</li>
+										<li class="dropdown-subnav__item">
+											<a href="#" class="dropdown-subnav__link">МДФ Egger Россия</a>
+										</li>
+									</ul>
+								</li>
+								<li data-submenu-id="submenu4" class="dropdown-nav__item">
+									<a href="#" class="dropdown-nav__link">ЛМДФ</a>
+								</li>
+								<li data-submenu-id="submenu5" class="dropdown-nav__item">
+									<a href="#" class="dropdown-nav__link">ДВП</a>
+								</li>
+								<li data-submenu-id="submenu6" class="dropdown-nav__item">
+									<a href="#" class="dropdown-nav__link">Столешницы</a>
+								</li>
+								<li data-submenu-id="submenu7" class="dropdown-nav__item">
+									<a href="#" class="dropdown-nav__link">Плиты TSS</a>
+								</li>
+								<li data-submenu-id="submenu8" class="dropdown-nav__item">
+									<a href="#" class="dropdown-nav__link">Мебельная фурнитура</a>
+								</li>
+								<li data-submenu-id="submenu9" class="dropdown-nav__item">
+									<a href="#" class="dropdown-nav__link">Расходные материалы</a>
+								</li>
+								<li data-submenu-id="submenu10" class="dropdown-nav__item">
+									<a href="#" class="dropdown-nav__link">Акции</a>
+								</li>
+								<li data-submenu-id="submenu11" class="dropdown-nav__item">
+									<a href="#" class="dropdown-nav__link">Фасады</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="navbar-menu__item">
+						<a href="#" class="navbar-menu__link"><span>бренды</span></a>
+					</li>
+					<li class="navbar-menu__item">
+						<a href="#" class="navbar-menu__link"><span>Производство</span></a>
+					</li>
+				</ul>
+	
+				<div class="navbar__search search">
+					<form action="#">
+						<input type="text" class="search__input" placeholder="Поиск по каталогу"/>
+						<input type="submit" value="" class="search__button"/>
+					</form>
+				</div>
+			</div>
+		</nav>
+	</header>
+	
+	<nav class="navbar-mobile">
+		<div class="navbar-mobile__body">
+			<button class="navbar-mobile__close">
+				<svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path></svg>
+			</button>
+			<div class="navbar-mobile__top">
+				<div class=" personal ">
+					<span class="personal__icon">
+						<i class="fas fa-sign-in-alt "></i>
+					</span>
+					<a data-fancybox data-src="#popup-login"  href="javascript:;" class="personal__link">Вход</a>
+					<span class="personal__devider d-lg-none d-xl-block">/</span>
+					<a href="#" class="personal__link d-lg-none d-xl-block">Регистрация</a>
+				</div>
+			</div>
+			<ul class="mobile-menu-dropdown"> 
+				<li class="mobile-menu-dropdown__back">
+					<a href="#"><i class="fas fa-chevron-left"></i> Назад</a>
+				</li>
+				<li>
+					<a href="#">Панели ДСП</a>
+				</li>
+				<li>
+					<a href="#">ЛДСП</a>
+				</li>
+				<li class="mmd-menu">
+					<a href="#">Панели МДФ</a>
+					<ul>
+						<li>
+							<a href="#">МДФ лакированный (Невский ламинат)</a>
+						</li>
+						<li>
+							<a href="#">МДФ Egger Россия</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mmd-menu">
+					<a href="#">ЛМДФ</a>
+					<ul>
+						<li>
+							<a href="#">ЛМДФ 234</a>
+						</li>
+						<li>
+							<a href="#">ЛМДФ 678</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">ДВП</a>
+				</li>
+				<li>
+					<a href="#">Столешницы</a>
+				</li>
+				<li>
+					<a href="#">Плиты TSS</a>
+				</li>
+				<li>
+					<a href="#">Мебельная фурнитура</a>
+				</li>
+				<li>
+					<a href="#">Расходные материалы</a>
+				</li>
+				<li>
+					<a href="#">Акции</a>
+				</li>
+				<li>
+					<a href="#">Фасады</a>
+				</li>
+			</ul>
+	
+			<ul class="mobile-menu"> 
+				<li class="mobile-menu__item">
+					<a href="#" class="mobile-menu__link">О компании</a>
+				</li>
+				<li class="mobile-menu__item">
+					<a href="#" class="mobile-menu__link">Партнёрство</a>
+				</li>
+				<li class="mobile-menu__item">
+					<a href="#" class="mobile-menu__link">Оплата и доставка</a>
+				</li>
+				<li class="mobile-menu__item">
+					<a href="#" class="mobile-menu__link">Новости</a>
+				</li>
+				<li class="mobile-menu__item">
+					<a href="#" class="mobile-menu__link">Контакты</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	
+	<div class="search-mobile">
+		<div class="container">
+			<form action="#" >
+				<div class="form-dropdown drop">
+					<div class="form-dropdown__input">
+						<div class="search-mobile__form">
+							<input type="text" class="form-input search-mobile__input" value="">
+							<input type="submit" class="search-mobile__button" value="">
+						</div>
+					</div>
+					<ul class="form-dropdown__list drop-list">
+						<li class="form-dropdown__item ">
+							<a href="#" class="form-dropdown__link">Серпухов, Московская область</a>
+						</li>
+						<li class="form-dropdown__item">
+							<a href="#" class="form-dropdown__link">Серпухов-15, Московская область</a>
+						</li>
+						<li class="form-dropdown__item">
+							<a href="#" class="form-dropdown__link">Серпухов-13, Московская область</a>
+						</li>
+						<li class="form-dropdown__item">
+							<a href="#" class="form-dropdown__link">Серпухов-12, Московская область</a>
+						</li>
+						<li class="form-dropdown__item">
+							<a href="#" class="form-dropdown__link">Серпухов-11, Московская область</a>
+						</li>
+					</ul>
+				</div>
+				
+			</form>
+		</div>
+	</div>
+	<!-- HEADER EOF   -->
+
+	<!-- BEGIN CONTENT -->
+	<main class="main main--rulles">
+		<div class="container">
+			<div class="box-bread-crumbs">
+				<ul class="bread-crambs">
+					<li class="bread-crambs__item">
+						<a href="#" class="bread-crambs__link">Главная</a>
+					</li>
+					<li class="bread-crambs__item">Партнерство</li>
+				</ul>
+			</div>
+			<div class="row m-main">
+				<div class="col-lg-7 col-md-8">
+					<div class="main__head">
+						<h1>Партнерство с Компанией ТЕХНОПЛИТ</h1>
+					</div>
+
+					<p>Наиболее эффективные решения для развития бизнеса принимаются коллективно. Партнерство с Компанией ТЕХНОПЛИТ - это формирование надежных долгосрочных деловых отношений, которые позволят сэкономить время и средства, абсолютно удовлетворить потребности покупателей. </p> 
+					<p>Если вы в перспективе не рассматриваете вариант партнерских взаимоотношений, то вспомните, что происходит с повозкой, потерявшей одно колесо! Сотрудничество – это гарантии, увеличение денежных ресурсов и потенциала компании.</p>
+				</div>
+				<div class="col-md-4 offset-lg-1">
+					<div class="m-form">
+						<div class="bl-title">Заручитесь поддержкой опытной компании-дистрибьютора</div>
+						<form action="#">
+							<div class="form-field">
+								
+								<input type="text" class="form-input" placeholder="Ваше имя и фамилия">
+							</div>
+							<div class="form-field">
+								
+								<input type="text" class="form-input tel-mask" placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _">
+							</div>
+							<div class="form-field m-form__button">
+								<input type="submit" class="btn btn--block btn--success" value="Стать партнером">
+							</div>
+						</form>
+						<p class="m-text-info">Нажимая на кнопку Вы даёте согласие на <a href="#" class="link-td">обработку персональных данных</a></p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<section class="m-advantages m-section m-section--gray">
+			<div class="container">
+				<div class="row m-advantages-wrap">
+					<div class="col-lg-4">
+						<div class="m-advantages-grid">
+							<div class="m-advantages-grid__head">
+								<div class="m-advantages-grid__icon"><img src="img/icon1.png" alt=""></div>
+								<div class="m-advantages-grid__title">14 лет опыта рыночных отношений</div>
+							</div>
+							<div class="m-block">
+								<div class="m-block__short">
+									<p>Экономическое взаимодействие по бизнес-концепту B2B с ведущим дистрибьютором - Компанией ТЕХНОПЛИТ способно расширить возможности индивидуальных предпринимателей и учредителей ... </p>
+									<a href="#" class="m-more">Читать дальше <i class="fas fa-chevron-right"></i></a>
+								</div>
+								<div class="m-block__full">
+									<p>Экономическое взаимодействие по бизнес-концепту B2B с ведущим дистрибьютором - Компанией ТЕХНОПЛИТ способно расширить возможности индивидуальных предпринимателей и учредителей ... ООО в области торговли. 14 лет опыта формирования рыночных отношений позволяют генерировать оптимальные бизнес-идеи и решения для реализации задуманного. Нам знакомы особенности оптовой и мелкооптовой торговли.</p>
+									<a href="#" class="m-more">Скрыть <i class="fas fa-chevron-right"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="m-advantages-grid">
+							<div class="m-advantages-grid__head">
+								<div class="m-advantages-grid__icon"><img src="img/icon2.png" alt=""></div>
+								<div class="m-advantages-grid__title">с 2005 года с ведущими производителями</div>
+							</div>
+							<div class="m-block">
+								<div class="m-block__short">
+									<p>Сотрудничая с десятками российских предприятий с 2005 года, Компания ТЕХНОПЛИТ сумела выстроить прочные дистрибьюторские отношения с ведущими производителями древесно-плитных материалов ...</p>
+									<a href="#" class="m-more">Читать дальше <i class="fas fa-chevron-right"></i></a>
+								</div>
+								<div class="m-block__full">
+									<p>Сотрудничая с десятками российских предприятий с 2005 года, Компания ТЕХНОПЛИТ сумела выстроить прочные дистрибьюторские отношения с ведущими производителями древесно-плитных материалов ... Многолетняя профессиональная деятельность в области торговли позволил сформировать колоссальный ассортимент, в котором нуждаются наши партнеры.</p>
+									<a href="#" class="m-more">Скрыть <i class="fas fa-chevron-right"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="m-advantages-grid">
+							<div class="m-advantages-grid__head">
+								<div class="m-advantages-grid__icon"><img src="img/icon3.png" alt=""></div>
+								<div class="m-advantages-grid__title">Выгодно для малого и среднего бизнеса</div>
+							</div>
+							<div class="m-block">
+								<div class="m-block__short">
+									<p>Представители малого и среднего бизнеса в праве рассчитывать на выгодные деловые отношения, которые нацелены на процветание компании-партнера, роста потребителей и бизнеса непосредственно ...</p>
+									<a href="#" class="m-more">Читать дальше <i class="fas fa-chevron-right"></i></a>
+								</div>
+								<div class="m-block__full">
+									<p>Представители малого и среднего бизнеса в праве рассчитывать на выгодные деловые отношения, которые нацелены на процветание компании-партнера, роста потребителей и бизнеса непосредственно ... “Компания ТЕХНОПЛИТ” – это организация, которая не преследует цель извлечь прибыль из единичных сделок. Наша компания стремиться выстроить взаимовыгодное, долгосрочное сотрудничество, которое всецело будет удовлетворять потребности наших партнеров.</p>
+									<a href="#" class="m-more">Скрыть <i class="fas fa-chevron-right"></i></a>
+								</div>
+							</div>
+							
+							
+						</div>
+					</div>
+				</div>
+
+				<div class="m-section__head">
+					<h2 class="m-section__title">Преимущества сотрудничества</h2>
+					<p class="m-section__descr">Компания ТЕХНОПЛИТ – это ведущая компания на российском рынке с 2005 года. <br> Многолетний опыт дает возможность предоставлять наиболее эффективные схемы сотрудничества с индивидуальным подходом к каждому партнеру.</p>
+				</div>
+	
+
+				
+				<div class="row accordion-wrap">
+					<div class="col-lg-6 col-md-5 hidden-iphone" id="aside">
+						<div class="accordion-img">
+							<div class="accordion-img__item  ac-img-1">
+								<img src="img/biznes-rukopozhatie-sdelka-5061.jpg" alt="">
+							</div>
+							<div class="accordion-img__item open ac-img-2">
+								<img src="img/biznes-rukopozhatie-sdelka-5061.jpg" alt="">
+							</div>
+							<div class="accordion-img__item ac-img-3">
+								<img src="img/biznes-rukopozhatie-sdelka-5061.jpg" alt="">
+							</div>
+							<div class="accordion-img__item ac-img-4">
+								<img src="img/biznes-rukopozhatie-sdelka-5061.jpg" alt="">
+							</div>
+							<div class="accordion-img__item ac-img-5">
+								<img src="img/biznes-rukopozhatie-sdelka-5061.jpg" alt="">
+							</div>
+							<div class="accordion-img__item ac-img-6">
+								<img src="img/biznes-rukopozhatie-sdelka-5061.jpg" alt="">
+							</div>
+							<div class="accordion-img__item ac-img-7">
+								<img src="img/biznes-rukopozhatie-sdelka-5061.jpg" alt="">
+							</div>
+
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-7" id="content">
+						<div class="accordion">
+							<div class="accordion__head " data-class=".ac-img-1">Огромный опыт <i class="fas fa-chevron-down"></i></div>
+							<div class="accordion__body" style="display: none;">
+								<p>“Компания ТЕХНОПЛИТ” – это ведущая компания на российском рынке с 2005 года. Многолетний опыт дает возможность предоставлять наиболее эффективные схемы сотрудничества с индивидуальным подходом к каждому партнеру. Деловые взаимоотношения гарантируют нашим клиентам новые бизнес-связи, которые действуют в качестве своеобразных рычагов для достижения успеха в ряде промышленных областей.</p>
+							</div>
+							<div class="accordion__head open" data-class=".ac-img-2">Широкий ассортимент <i class="fas fa-chevron-down"></i></div>
+							<div class="accordion__body" >
+								<p>Наше преимущество – прочные дистрибьюторские отношения с лидерами производства строительных материалов. Качественные древесно-плитные материалы составляют большую часть позиций ассортимента Компании ТЕХНОПЛИТ. Количество партнеров ежегодно растет, что дает возможность пополнять ряд продукции новыми единицами. Сейчас доступных позиций для заказа насчитывается уже более 1000. Наша компания - дилер международных производителей и официальный представитель ведущих компаний по изготовлению:</p>
+
+								<ul class="square">
+									<li>элементов корпусной мебели;</li>
+									<li>изделий для изготовления фасадов, столешниц;</li>
+									<li>мебельной фурнитуры;</li>
+									<li>др. комплектующих.</li>
+								</ul>
+							</div>
+							<div class="accordion__head" data-class=".ac-img-3">Доставка по всей стране <i class="fas fa-chevron-down"></i></div>
+							<div class="accordion__body" style="display: none;">
+								<p>Наше преимущество – прочные дистрибьюторские отношения с лидерами производства строительных материалов. Качественные древесно-плитные материалы составляют большую часть позиций ассортимента Компании ТЕХНОПЛИТ. Количество партнеров ежегодно растет, что дает возможность пополнять ряд продукции новыми единицами. Сейчас доступных позиций для заказа насчитывается уже более 1000. Наша компания - дилер международных производителей и официальный представитель ведущих компаний по изготовлению:</p>
+							</div>
+							<div class="accordion__head" data-class=".ac-img-4">Качественое производство <i class="fas fa-chevron-down"></i></div>
+							<div class="accordion__body" style="display: none;">
+								<p>Наше преимущество – прочные дистрибьюторские отношения с лидерами производства строительных материалов. Качественные древесно-плитные материалы составляют большую часть позиций ассортимента Компании ТЕХНОПЛИТ. Количество партнеров ежегодно растет, что дает возможность пополнять ряд продукции новыми единицами. Сейчас доступных позиций для заказа насчитывается уже более 1000. Наша компания - дилер международных производителей и официальный представитель ведущих компаний по изготовлению:</p>
+							</div>
+							<div class="accordion__head" data-class=".ac-img-5">Обновление продукции <i class="fas fa-chevron-down"></i></div>
+							<div class="accordion__body" style="display: none;">
+								<p>Наше преимущество – прочные дистрибьюторские отношения с лидерами производства строительных материалов. Качественные древесно-плитные материалы составляют большую часть позиций ассортимента Компании ТЕХНОПЛИТ. Количество партнеров ежегодно растет, что дает возможность пополнять ряд продукции новыми единицами. Сейчас доступных позиций для заказа насчитывается уже более 1000. Наша компания - дилер международных производителей и официальный представитель ведущих компаний по изготовлению:</p>
+							</div>
+							<div class="accordion__head" data-class=".ac-img-6">Регулярные инвестиции <i class="fas fa-chevron-down"></i></div>
+							<div class="accordion__body" style="display: none;">
+								<p>Наше преимущество – прочные дистрибьюторские отношения с лидерами производства строительных материалов. Качественные древесно-плитные материалы составляют большую часть позиций ассортимента Компании ТЕХНОПЛИТ. Количество партнеров ежегодно растет, что дает возможность пополнять ряд продукции новыми единицами. Сейчас доступных позиций для заказа насчитывается уже более 1000. Наша компания - дилер международных производителей и официальный представитель ведущих компаний по изготовлению:</p>
+							</div>
+							<div class="accordion__head" data-class=".ac-img-7">Надежная поддержка клиентов <i class="fas fa-chevron-down"></i></div>
+							<div class="accordion__body" style="display: none;">
+								<p>Наше преимущество – прочные дистрибьюторские отношения с лидерами производства строительных материалов. Качественные древесно-плитные материалы составляют большую часть позиций ассортимента Компании ТЕХНОПЛИТ. Количество партнеров ежегодно растет, что дает возможность пополнять ряд продукции новыми единицами. Сейчас доступных позиций для заказа насчитывается уже более 1000. Наша компания - дилер международных производителей и официальный представитель ведущих компаний по изготовлению:</p>
+							</div>
+						</div>		
+					</div>
+
+				</div>
+
+				<div class="section-button"><a href="#" class="btn btn--success">Стать партнером</a></div>
+			</div>
+		</section>
+		<section class="section section-text m-partner ">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-6 col-lg-7 ">
+						<h2 >Ценности партнерства</h2>
+						<p class="size-lg">Компания ТЕХНОЛИТ заинтересована в достижении корпоративных целей больше, чем в простом обогащении. Получение прибыли – это следствие плодотворного сотрудничества, долгосрочного партнерства. </p>
+
+						<p>Стремление к постоянному самосовершенствованию также среди ценностей компании-дистрибьютора. Мы нацелены дальше предлагать эффективные бизнес-решения и помогать партнерам реализовывать поставленные цели.</p>
+
+						<p>Четкое следование принципам и ценностям сделало российскую “Компанию ТЕХНОЛИТ” официальным дилером международной компании EGGER и других именитых фирм. Список наших партнеров стремительно пополняется, и в нем всегда есть место для перспективных компаний со схожими целями и ценностями!</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="m-section m-stat-partner m-section--gray">
+			<div class="container">
+				<div class="stat-partner"><img src="img/stat-parner.png" alt=""></div>
+				<div class="m-section__head">
+					<h2 class="m-section__title">Стать партнером</h2>
+					<p class="m-section__descr size-lg">Заручитесь поддержкой опытной компании-дистрибьютора – <br>станьте партнером Компании ТЕХНОЛИТ.</p>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-5 col-md-6">
+						<p>Разработка бизнес-решений, схемы сотрудничества в индивидуальном порядке и другие преимущества ждут будущих партнеров с началом совместной деятельности. Чтобы сделать шаг навстречу новым перспективам и росту бизнес уже сейчас, оставьте в предложенной форме личную информацию.</p>
+						<p>Команда Компании ТЕХНОЛИТ заинтересована в новых деловых отношениях, поэтому мы свяжемся с вами, как только обработаем электронную заявку.</p> 
+						<p>Успеха и процветания нашему общему делу!</p>
+					</div>
+					<div class="col-lg-4 offset-lg-3 col-md-6">
+						<div class="m-form m-form--br">
+							<p>Заполните формуляр и ожидайте звонка персонального менеджера в ближайшее время</p>
+							<form action="#">
+								<div class="form-field">
+									
+									<input type="text" class="form-input" placeholder="Ваше имя и фамилия">
+								</div>
+								<div class="form-field">
+									
+									<input type="text" class="form-input tel-mask" placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _">
+								</div>
+								<div class="form-field m-form__button">
+									<input type="submit" class="btn btn--block btn--success" value="Стать партнером">
+								</div>
+							</form>
+							<p class="m-text-info">Нажимая на кнопку Вы даёте согласие на <a href="#" class="link-td">обработку персональных данных</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<!-- CONTENT EOF   -->
+	
+	
+	<!-- BEGIN FOOTER -->
+	<footer class="footer">
+		<div class="container">
+			<div class="row footer__row">
+				<div class="col-sm-5 col-md-3 col-lg-2 footer__item footer__item--hr footer__item--first">
+					<div class="logo footer__logo"><a href="#"><img src="img/technoplit-logo-white.svg" alt=""></a></div>
+					<ul class="footer-nav">
+						<li class="footer-nav__item">
+							<a href="#" class="footer-nav__link">О компании</a>
+						</li>
+						<li class="footer-nav__item">
+							<a href="#" class="footer-nav__link">Партнёрство</a>
+						</li>
+						<li class="footer-nav__item">
+							<a href="#" class="footer-nav__link">Оплата и доставка</a>
+						</li>
+						<li class="footer-nav__item">
+							<a href="#" class="footer-nav__link">Новости</a>
+						</li>
+						<li class="footer-nav__item">
+							<a href="#" class="footer-nav__link">Контакты</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-7 col-md-5 col-lg-4 footer__item footer__item--hr footer__item--second d-none d-sm-block">
+					<div class="footer__title">Каталог продукции</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<ul class="footer-nav">
+								<li class="footer-nav__item">
+									<a href="#" class="footer-nav__link">ДСП</a>
+								</li>
+								<li class="footer-nav__item">
+									<a href="#" class="footer-nav__link">ЛДСП</a>
+								</li>
+								<li class="footer-nav__item">
+									<a href="#" class="footer-nav__link">МДФ</a>
+								</li>
+								<li class="footer-nav__item">
+									<a href="#" class="footer-nav__link">ЛМДФ</a>
+								</li>
+								<li class="footer-nav__item">
+									<a href="#" class="footer-nav__link">ДВП</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-sm-8">
+							<ul class="footer-nav">
+								<li class="footer-nav__item">
+									<a href="#" class="footer-nav__link">Столешницы</a>
+								</li>
+								<li class="footer-nav__item">
+									<a href="#" class="footer-nav__link">Плиты TSS</a>
+								</li>
+								<li class="footer-nav__item">
+									<a href="#" class="footer-nav__link">Мебельная фурнитура</a>
+								</li>
+								<li class="footer-nav__item">
+									<a href="#" class="footer-nav__link">Расходные материалы</a>
+								</li>
+								<li class="footer-nav__item">
+									<a href="#" class="footer-nav__link">Акции</a>
+								</li>
+								<li class="footer-nav__item">
+									<a href="#" class="footer-nav__link">Фасады</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-4 col-lg-3 footer__item">
+					<div class="footer__title">Контактная информация</div>
+					<address class="address">
+						<div class="address__item">
+							<div class="address__icon"><i class="fas fa-map-marker-alt"></i></div>
+							<p>143051, Московская обл., Одинцовский р-он, РП Большие Вяземы, ул. Ямская, вл. 4, стр. 27</p>
+						</div>
+						<div class="address__item">
+							<div class="address__icon"><i class="fas fa-phone"></i></div>
+							<p>
+								<a href="tel:74957376009">+7 (495) 737-60-09</a><br>
+								<a href="tel:74957893425">+7 (495) 789-34-25</a>
+							</p>
+						</div>
+						<div class="address__item">
+							<div class="address__icon"><i class="fas fa-envelope"></i></div>
+							<p><a href="mailto:info@tehnoplit.ru">info@tehnoplit.ru</a></p>
+						</div>
+					</address>
+				</div>
+				<div class="col-xs-12 col-lg-3 footer__item">
+					<div class="subscribe">
+						<div class="row align-items-center">
+							<div class="col-lg-12 col-md-6 col-sm-12">
+								<div class="footer__title">Рассылка</div>
+								<p class="fw300 ff2">Подпишитесь, чтобы получать наши акции и предложения, один раз в неделю.</p>
+							</div>
+							<div class="col-lg-12 col-md-6 col-sm-12">
+								<form action="#">
+									<div class="row">
+										<div class="col-lg-12 col-md-6 col-sm-5">
+											<div class="form-field">
+												<input type="email" class="form-input" placeholder="Ваш e-mail">
+											</div>
+										</div>
+	
+										<div class="col-lg-12 col-md-6 col-sm-5">
+											<input type="submit" value="Подписаться" class="btn btn--block btn--success">
+										</div>
+									</div>
+								</form>		
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="footer__bottom">
+				<p class="copyright">ООО «Компания ТЕХНОПЛИТ» &copy; 2005 - 2019</p>
+			</div>
+		</div>
+	</footer>
+	<!-- FOOTER EOF   -->
+
+</div>
+<!-- BODY EOF   -->
+
+
+<div style="display: none;" id="popup-geo" class="popup animated-modal">
+	<div class="popup__head">
+		<h2 class="popup__title">Выберите свой город</h2>
+	</div>
+	<form action="#">
+		<ul class="list-check column-3">
+			<li class="list-check__item">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span class="checkbox__figure"></span>
+					<span class="checkbox__text">Москва</span>
+				</label>
+			</li>
+			<li class="list-check__item">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span class="checkbox__figure"></span>
+					<span class="checkbox__text">Санкт-петербург</span>
+				</label>
+			</li>
+			<li class="list-check__item">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span class="checkbox__figure"></span>
+					<span class="checkbox__text">Волгоград</span>
+				</label>
+			</li>
+			<li class="list-check__item">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span class="checkbox__figure"></span>
+					<span class="checkbox__text">Воронеж</span>
+				</label>
+			</li>
+			<li class="list-check__item">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span class="checkbox__figure"></span>
+					<span class="checkbox__text">Екатеринбург</span>
+				</label>
+			</li>
+			<li class="list-check__item">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span class="checkbox__figure"></span>
+					<span class="checkbox__text">Красноярск</span>
+				</label>
+			</li>
+			<li class="list-check__item">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span class="checkbox__figure"></span>
+					<span class="checkbox__text">Краснодар</span>
+				</label>
+			</li>
+			<li class="list-check__item">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span class="checkbox__figure"></span>
+					<span class="checkbox__text">Нижний Новгород</span>
+				</label>
+			</li>
+			<li class="list-check__item">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span class="checkbox__figure"></span>
+					<span class="checkbox__text">Новосибирск</span>
+				</label>
+			</li>
+			<li class="list-check__item">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span class="checkbox__figure"></span>
+					<span class="checkbox__text">Пермь</span>
+				</label>
+			</li>
+			<li class="list-check__item">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span class="checkbox__figure"></span>
+					<span class="checkbox__text">Ростов-на-Дону</span>
+				</label>
+			</li>
+			<li class="list-check__item">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span class="checkbox__figure"></span>
+					<span class="checkbox__text">Самара</span>
+				</label>
+			</li>
+			<li class="list-check__item">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span class="checkbox__figure"></span>
+					<span class="checkbox__text">Санкт-Петербург</span>
+				</label>
+			</li>
+			<li class="list-check__item">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span class="checkbox__figure"></span>
+					<span class="checkbox__text">Уфа</span>
+				</label>
+			</li>
+			<li class="list-check__item">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span class="checkbox__figure"></span>
+					<span class="checkbox__text">Челябинск</span>
+				</label>
+			</li>
+		</ul>
+		
+		<div class="popup__head">
+			<h2 class="popup__title">Или укажите в поле</h2>
+		</div>
+		<div class="row">
+			<div class="col-sm-8 ">
+				<div class="form-dropdown drop">
+					<div class="form-dropdown__input"><input type="text" class="form-input" value=""></div>
+					<ul class="form-dropdown__list drop-list">
+						<li class="form-dropdown__item ">
+							<a href="#" class="form-dropdown__link">Серпухов, Московская область</a>
+						</li>
+						<li class="form-dropdown__item">
+							<a href="#" class="form-dropdown__link">Серпухов-15, Московская область</a>
+						</li>
+						<li class="form-dropdown__item">
+							<a href="#" class="form-dropdown__link">Серпухов-13, Московская область</a>
+						</li>
+						<li class="form-dropdown__item">
+							<a href="#" class="form-dropdown__link">Серпухов-12, Московская область</a>
+						</li>
+						<li class="form-dropdown__item">
+							<a href="#" class="form-dropdown__link">Серпухов-11, Московская область</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-sm-4 ">
+				<input type="submit" class="btn btn--block btn--success" value="Выбрать">
+			</div>
+		</div>
+		
+	</form>
+</div>
+
+<div style="display: none;" id="popup-callback" class="popup animated-modal">
+	<div class="popup__head">
+		<h2 class="popup__title">Заказать звонок</h2>
+	</div>
+	<form action="#">
+		<div class="form-field">
+			<label>Ваше имя:</label>
+			<input type="text" class="form-input" placeholder="Имя">
+		</div>
+		<div class="form-field">
+			<label>Номер телефона:</label>
+			<input type="text" class="form-input tel-mask" placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _">
+		</div>
+		<input type="submit" class="btn btn--block btn--success" value="Перезвоните мне">
+	</form>
+</div>
+
+<div style="display: none;" id="popup-login" class="popup animated-modal">
+	<div class="popup__head">
+		<h2 class="popup__title">Авторизация</h2>
+	</div>
+	<form action="#">
+		<div class="form-field">
+			<label >Электронная почта:</label>
+			<input type="email" class="form-input" placeholder="Адрес почты">
+		</div>
+		<div class="form-field">
+			<label>Пароль:</label>
+			<input type="password" class="form-input " placeholder="Введите пароль">
+		</div>
+		<div class="form-field">
+			<label class="checkbox">
+				<input type="checkbox">
+				<span class="checkbox__figure"></span>
+				<span class="checkbox__text">Запомнить меня</span>
+			</label>
+		</div>
+		<input type="submit" class="btn btn--block btn--success" value="Войти">
+	</form>
+
+	<div class="popup__footer">
+		<p class="mb1"><a href="#" class="link-td">Забыли пароль?</a></p> 
+		<p class="mb1">Или пройдите <a href="#" class="link-td">регистрацию</a></p>
+	</div>
+
+</div>
+
+<div style="display: none;" id="popup-question" class="popup animated-modal">
+	<div class="popup__head">
+		<h2 class="popup__title">Задать вопрос</h2>
+	</div>
+	<form action="#">
+		<div class="form-field">
+			<label >Ваше имя:</label>
+			<input type="text" class="form-input" placeholder="Имя">
+		</div>
+		<div class="form-field">
+			<label >Ваш e-mail:</label>
+			<input type="email" class="form-input" placeholder="Адрес почты">
+		</div>
+		<div class="form-field">
+			<label >Ваш вопрос:</label>
+			<textarea class="form-input" placeholder="Ваш вопрос"></textarea>
+		</div>
+		<div class="form-field">
+			<img src="img/capcha.png" alt="">
+		</div>
+		
+		<input type="submit" class="btn btn--block btn--success" value="Отправить">
+	</form>
+</div>
+
+<div class="overlay"></div>
+<div class="icon-load">
+	<div class="ball a"></div>
+	<div class="ball b"></div>
+	<div class="ball c"></div>
+</div>
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+	<symbol id="icon-arrow-right" viewBox="0 0 17 32">
+	<title>arrow-right</title>
+	<path  d="M1.231 32v0l16-16-16-16-1.231 1.231 14.769 14.769-14.769 14.769z"></path>
+	</symbol>
+	<symbol id="icon-arrow-left" viewBox="0 0 17 32">
+	<title>arrow-left</title>
+	<path  d="M16 32v0l-16-16 16-16 1.23 1.231-14.769 14.769 14.769 14.769z"></path>
+	</symbol>
+	<symbol id="icon-grid" viewBox="0 0 32 32">
+	<title>grid</title>
+	<path  d="M-0-0h6.4v6.4h-6.4zM-0 12.8h6.4v6.4h-6.4zM-0 25.6h6.4v6.4h-6.4zM12.799-0h6.4v6.4h-6.4zM12.799 12.8h6.4v6.4h-6.4zM12.799 25.6h6.4v6.4h-6.4zM25.6-0h6.4v6.4h-6.4zM25.6 12.8h6.4v6.4h-6.4zM25.6 25.6h6.4v6.4h-6.4z"></path>
+	</symbol>
+	<symbol id="icon-list" viewBox="0 0 32 32">
+	<title>list</title>
+	<path  d="M-0-0h32v6.4h-32zM-0 12.8h32v6.4h-32zM-0 25.6h32v6.4h-32z"></path>
+	</symbol>
+	<symbol id="icon-list-big" viewBox="0 0 32 32">
+	<title>list-big</title>
+	<path  d="M0-0h6.399v6.4h-6.399zM0 12.8h6.399v6.4h-6.399zM0 25.6h6.399v6.4h-6.399zM12.8-0h19.2v6.4h-19.2zM12.8 12.8h19.2v6.4h-19.2zM12.8 25.6h19.2v6.4h-19.2z"></path>
+	</symbol>
+	<symbol id="icon-shopping-cart" viewBox="0 0 32 32">
+	<title>shopping-cart</title>
+	<path  d="M10.31 20.688h0.001c0.001 0 0.002-0 0.004-0h16.997c0.418 0 0.786-0.278 0.901-0.68l3.75-13.125c0.081-0.283 0.024-0.587-0.153-0.822s-0.454-0.373-0.749-0.373h-22.915l-0.67-3.016c-0.095-0.429-0.476-0.734-0.915-0.734h-5.625c-0.518 0-0.938 0.42-0.938 0.938s0.42 0.938 0.938 0.938h4.873c0.119 0.534 3.207 14.432 3.385 15.232-0.996 0.433-1.695 1.427-1.695 2.581 0 1.551 1.262 2.813 2.813 2.813h17c0.518 0 0.938-0.42 0.938-0.938s-0.42-0.938-0.938-0.938h-17c-0.517 0-0.938-0.421-0.938-0.938s0.419-0.936 0.935-0.937zM29.82 7.563l-3.214 11.25h-15.541l-2.5-11.25z"></path>
+	<path  d="M9.375 27.25c0 1.551 1.262 2.813 2.813 2.813s2.813-1.262 2.813-2.813-1.262-2.813-2.813-2.813-2.813 1.262-2.813 2.813zM12.188 26.313c0.517 0 0.938 0.421 0.938 0.938s-0.421 0.938-0.938 0.938-0.938-0.421-0.938-0.938 0.421-0.938 0.938-0.938z"></path>
+	<path  d="M22.625 27.25c0 1.551 1.262 2.813 2.813 2.813s2.813-1.262 2.813-2.813-1.262-2.813-2.813-2.813-2.813 1.262-2.813 2.813zM25.438 26.313c0.517 0 0.938 0.421 0.938 0.938s-0.421 0.938-0.938 0.938-0.938-0.421-0.938-0.938 0.421-0.938 0.938-0.938z"></path>
+	</symbol>
+	<symbol id="icon-close" viewBox="0 0 32 32">
+	<title>close</title>
+	<path  d="M3.31 32.023l-3.335-3.335 12.695-12.695-12.518-12.518 3.323-3.323 12.518 12.518 12.695-12.695 3.335 3.335-12.696 12.696 12.518 12.518-3.323 3.323-12.518-12.518z"></path>
+	</symbol>
+	</defs>
+</svg>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.formstyler.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+<script src="js/jquery.menu-aim.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=dfeede90-0c41-4832-a234-cf7898175c75&lang=ru_RU"
+  type="text/javascript">
+  </script>
+<script src="js/custom.js"></script>
+</body>
+</html>

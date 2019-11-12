@@ -502,6 +502,9 @@ a.link-td {
   a.link-td:hover {
     border-bottom-color: transparent; }
 
+.size-lg {
+  font-size: 1.6rem; }
+
 h1:not([class]),
 h2:not([class]),
 h3:not([class]),
@@ -539,7 +542,7 @@ h5:not([class]) {
   margin-bottom: 2rem;
   font-size: 1.4rem; }
 
-p:not([class]) {
+p:not([class]), p.size-lg {
   margin-bottom: 2rem;
   line-height: inherit; }
 
@@ -3081,6 +3084,159 @@ label {
 #popup-geo {
   max-width: 61.5rem !important; }
 
+/* Styles 2019 */
+.main--rulles {
+  padding-bottom: 0  !important; }
+
+.m-main {
+  padding-bottom: 10rem; }
+
+.m-form {
+  padding: 0 3rem; }
+  .m-form--br {
+    border: 0.1rem solid #d6d6d6;
+    background: #fff;
+    padding: 2.5rem 3rem; }
+  .m-form__button {
+    margin-top: 3rem; }
+
+.m-text-info {
+  color: #808080; }
+
+.m-more {
+  color: #979797;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700; }
+  .m-more i {
+    margin-left: .5rem;
+    font-size: 1.1rem; }
+  .m-more:hover {
+    color: #1b9247; }
+
+.m-section {
+  padding: 7.5rem 0;
+  position: relative; }
+  .m-section--gray {
+    background-color: #f4f4f5; }
+  .m-section__head {
+    text-align: center;
+    margin-bottom: 5.5rem; }
+  .m-section__title {
+    margin-top: 0;
+    margin-bottom: 1.7rem;
+    font-size: 2.4rem;
+    font-weight: 700; }
+  .m-section__descr {
+    max-width: 82rem;
+    margin-left: auto;
+    margin-right: auto; }
+  .m-section .stat-partner {
+    position: absolute;
+    bottom: 0;
+    left: 41%;
+    width: auto; }
+    .m-section .stat-partner img {
+      max-width: none; }
+
+.m-advantages-wrap {
+  margin-top: -11.5rem;
+  margin-bottom: 4rem; }
+
+.m-advantages-grid {
+  background: #fff;
+  border: 0.1rem solid #d6d6d6;
+  padding: 2.5rem 3rem;
+  margin-bottom: 3rem; }
+  .m-advantages-grid__head {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    margin-bottom: 2rem; }
+  .m-advantages-grid__icon {
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 6rem;
+    margin-right: 2rem; }
+  .m-advantages-grid__title {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #2c2e35; }
+
+.m-partner {
+  background-image: url("../img/partner-bg.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: contain; }
+
+.m-stat-partner {
+  overflow: hidden; }
+
+.m-block__full {
+  display: none; }
+
+.m-block.open .m-block__full {
+  display: block; }
+
+.m-block.open .m-block__short {
+  display: none; }
+
+.accordion {
+  border-bottom: .1rem solid #d6d6d6; }
+  .accordion__head {
+    border-top: .1rem solid #d6d6d6;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 1.6rem 4rem 1.6rem 0;
+    position: relative;
+    cursor: pointer;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear; }
+    .accordion__head .fas {
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+      right: 0;
+      color: #979797;
+      font-size: 1.6rem; }
+    .accordion__head:hover {
+      color: #1b9247; }
+    .accordion__head:first-child {
+      border-top: none; }
+    .accordion__head.open .fas {
+      -webkit-transform: translate(0, -50%) rotate(180deg);
+      -ms-transform: translate(0, -50%) rotate(180deg);
+      transform: translate(0, -50%) rotate(180deg); }
+  .accordion__body {
+    padding: 0 8rem 2.5rem 0; }
+    .accordion__body > *:last-child {
+      margin-bottom: 0; }
+    .accordion__body > *:first-child {
+      margin-top: 0; }
+
+.accordion-img__item {
+  display: none; }
+  .accordion-img__item.open {
+    display: block; }
+
+.section-button {
+  text-align: center;
+  margin-top: 4rem; }
+  .section-button .btn {
+    min-width: 30rem; }
+
 /* 6. FOOTER */
 /* ================================================ */
 .footer {
@@ -3252,6 +3408,13 @@ label {
       display: block; }
     .delivery-block-details__label, .delivery-block-details__labeld {
       display: block; }
+  .m-form:not(.m-form--br) {
+    padding-left: 0;
+    padding-right: 0; }
+  .m-partner {
+    background-image: url("../img/partner-bg-lg.png"); }
+  .m-section .stat-partner {
+    left: 35%; }
   /* Footer === */ }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
@@ -3424,6 +3587,10 @@ label {
     text-align: right; }
   .row-history__td--price {
     padding-top: 0; }
+  .m-partner {
+    background-image: url("../img/partner-bg-md.png"); }
+  .m-advantages-grid__title {
+    max-width: 30rem; }
   /* Footer === */
   .footer__bottom {
     margin-top: 1.6rem;
@@ -3707,7 +3874,39 @@ label {
     top: -40px !important; }
   .column-3 {
     -webkit-column-count: 2;
-    column-count: 2; } }
+    column-count: 2; }
+  .m-form:not(.m-form--br) {
+    padding-top: 2rem; }
+    .m-form:not(.m-form--br) form {
+      max-width: 30rem;
+      margin-left: auto;
+      margin-right: auto; }
+  .m-form--br {
+    max-width: 34.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem; }
+  .m-section .stat-partner {
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    margin-left: -1rem;
+    bottom: -12rem; }
+  .m-advantages-grid {
+    margin-bottom: 1.5rem; }
+  .m-section__descr br {
+    display: none; }
+  .hidden-iphone {
+    display: none !important; }
+  .m-section__head {
+    margin-bottom: 3rem; }
+  .m-partner {
+    background: none; }
+  .m-stat-partner {
+    text-align: center; }
+  .accordion__body {
+    padding-right: 0; } }
 
 @media screen and (max-width: 575px) {
   .form-dropdown {
@@ -3812,6 +4011,21 @@ label {
     width: calc(100% - 3.9rem); }
   .box-back {
     text-align: center; }
+  .m-section {
+    padding: 6rem 0; }
+  .m-advantages-wrap {
+    margin-top: -10rem; }
+  .m-advantages-grid {
+    padding: 2.4rem 2.5rem; }
+  .section-button .btn {
+    min-width: 28rem;
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .m-section .stat-partner img {
+    max-width: 50rem; }
   /* Contacts === */
   #map-1, #map-2 {
     height: 28rem; }
