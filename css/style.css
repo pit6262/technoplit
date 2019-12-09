@@ -1361,8 +1361,9 @@ label {
 
 .dropdown-item {
   position: relative; }
-  .dropdown-item:hover .dropdown-block {
-    display: block; }
+  @media screen and (min-width: 992px) {
+    .dropdown-item:hover .dropdown-block {
+      display: block; } }
 
 .dropdown-block {
   position: absolute;
@@ -3028,6 +3029,9 @@ label {
   background: rgba(44, 46, 53, 0.2); }
   .overlay.open {
     display: block; }
+  @media screen and (min-width: 992px) {
+    .overlay.n-open {
+      display: block; } }
 
 .hr {
   clear: both;

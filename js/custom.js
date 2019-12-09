@@ -251,10 +251,10 @@ $(function(){
 
 	$('.dropdown-item').on({
 	    mouseenter: function () {
-	        $('.overlay').addClass('open');
+	        $('.overlay').addClass('n-open');
 	    },
 	    mouseleave: function () {
-	        $('.overlay').removeClass('open');
+	        $('.overlay').removeClass('n-open');
 	    }
 
     })
